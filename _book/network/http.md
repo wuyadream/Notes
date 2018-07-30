@@ -22,11 +22,11 @@ HTTP采用B/S模式，客户端发出请求，服务器响应请求。
 
 > 第一步：地址解析
 
-当浏览器拿到`www.google.com`这个url时,并不知道应该去哪里请求资源。所以会发出DNS请求解析这个url，获得服务器的IP地址和端口号。
+当浏览器拿到`www.google.com`这个url时,并不知道应该去哪里请求资源。所以会发出DNS请求解析这个url，获得服务器的IP地址。
 
 > 第二步：封装HTTP请求报文
 
-拿到主机IP地址后，浏览器会把请求的协议、主机号、端口号和资源路径结合本机的信息封装成一个HTTP请求包。
+拿到主机IP地址后，浏览器会把请求url的协议、主机号、端口号和资源路径结合本机的信息封装成一个HTTP请求包。
 
 > 第三步：封装TCP包，建立TCP连接
 
@@ -47,15 +47,116 @@ HTTP采用B/S模式，客户端发出请求，服务器响应请求。
 
 ## 4、报文结构
 
+基本有状态行、请求头和正文信息组成。
+
+> 请求信息
+
+```
+POST / HTTP/1.1
+ Host: www.example.com
+ User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.6)
+ Gecko/20050225 Firefox/1.0.1
+ Content-Type: application/x-www-form-urlencoded
+ Content-Length: 40
+ Connection: Keep-Alive
+
+ sex=man&name=Professional  
+```
+
+> 响应报文
+
+```
+HTTP/1.1 200 OK
+
+Server:Apache Tomcat/5.0.12
+Date:Mon,6Oct2003 13:23:42 GMT
+Content-Length:112
+
+<html>...
+```
+
 ## 5、请求方法
 HTTP/1.1协议中定义了八种方法来操作指定资源
+
+
 |方法名|主要用途|
 |:----|:----|
 |GET|像指定的资源发出“显式”请求，只会读取数据，不会产生副作用|
+|HEAD|请求资源的元信息或元数据|
+|POST|向指定资源提交数据，请求服务器处理|
+|PUT|向指定资源上传最新内容|
+|DELETE|请求服务器删除URI指定的资源|
+|OPTIONS|请求该资源支持的HTTP方法|
+|CONNECT|HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器|
 
+> GET和POST请求的区别
+
+1.GET在浏览器回退时是无害的，而POST会再次提交请求。
+2.GET请求的url地址可以被保存到书签，而POST不可以。
+3.GET请求会被浏览器主动cache，而POST不会，除非手动设置。
+4.GET请求只能进行URL编码，而POST支持多种编码方式。
+5.GET请求参数会保留在浏览器历史记录里，而POST参数不会被保留。
+6.GET请求在URL中传送的参数是有长度限制(4k,IE是2k)的，而POST没有。
+7.GET只接受ASCII字符，而POST没有限制。
+8.POST比GET更安全，因为GET的参数直接暴露在URL上，所以不能用来传递敏感信息。
+9.GET的参数通过URL传递，POST的参数放在body中。
+10.GET产生一个TCP数据包,POST产生两个TCP数据包(firefox只发送一次)。
+
+> 条件GET
+
+HTTP条件GET时HTTP协议为了减少不必要的带宽浪费，提出的一种方案。当客户端之前已经访问过某网站，并打算再次访问网站时，客户端向服务器发一个包询问是否在上一次访问网站的时间后修改了页面，如果没有更新，就继续使用本地缓存，如果发生了更新则返回更新后的网页。下面是一个实例：
+```
+请求报文：
+ GET / HTTP/1.1  
+ Host: www.sina.com.cn:80  
+ If-Modified-Since:Thu, 4 Feb 2010 20:39:13 GMT  
+ Connection: Close  
+
+响应报文：
+ HTTP/1.0 304 Not Modified  
+ Date: Thu, 04 Feb 2010 12:38:41 GMT  
+ Content-Type: text/html  
+ Expires: Thu, 04 Feb 2010 12:39:41 GMT  
+ Last-Modified: Thu, 04 Feb 2010 12:29:04 GMT  
+ Age: 28  
+ X-Cache: HIT from sy32-21.sina.com.cn  
+ Connection: close 
+```
 
 ## 6、状态码
 
+所有HTTP响应的第一行都是状态航，分别是HTTP协议版本号，3位数字组成的状态码，以及描述状态的短语，用空格隔开。
+
+状态代码的第一个数字代表当前响应的类型：
+
+|状态码|状态消息|
+|---|---|
+|1XX消息|请求已被服务器接收，继续处理|
+|2XX成功|请求已被服务器接收、理解并接受|
+|3XX重定向|需要后续操作才能完成这一请求|
+|4XX请求错误|请求含有语法错误或者无法被正常执行|
+|5XX服务器错误|服务器在处理正确请求时发生错误|
+
+应该注意的几个状态码：
+
+|状态码|状态消息|
+|---|---|
+|200|请求成功|
+|301|永久重定向|
+|302|暂时重定向|
+|304|请求成功，文件未改变，可使用缓存|
+|401|请求未经授权|
+|403|服务器收到请求，但是拒绝服务|
+|404|请求失败|
+|500|服务器发生不可预期的错误|
+|503|服务器暂时不能处理客户端的请求|
+
 ## 7、HTTP缓存机制
+
+为了减少访问网站的流量和服务器的压力，HTTP缓存诞生了。
+
+> 在HTTP报文中与缓存相关的首部:
+
+
 
 ## 8、HTTP1.0、HTTP1.1与HTTP2.0
