@@ -231,7 +231,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="section12">Section1.2</h1>
+                                <h1 id="tcp&#x534F;&#x8BAE;">TCP&#x534F;&#x8BAE;</h1>
+<p>TCP&#x534F;&#x8BAE;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x8FDE;&#x63A5;&#x7684;&#x3001;&#x53EF;&#x9760;&#x7684;&#x5B57;&#x8282;&#x6D41;&#x670D;&#x52A1;&#x3002;</p>
+<h2 id="1&#x3001;tcp&#x4E09;&#x6B21;&#x63E1;&#x624B;">1&#x3001;TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;</h2>
+<p>TCP&#x5728;&#x5EFA;&#x7ACB;&#x4E00;&#x5404;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x603B;&#x5171;&#x53D1;&#x9001;&#x4E09;&#x4E2A;&#x5305;&#x3002;</p>
+<p>&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#xFF0C;&#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x540C;&#x6B65;&#x8FDE;&#x63A5;&#x53CC;&#x65B9;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#x548C;&#x786E;&#x8BA4;&#x53F7;&#xFF0C;&#x4EA4;&#x6362;TCP&#x7A97;&#x53E3;&#x4FE1;&#x606F;&#x5927;&#x5C0F;&#x3002;</p>
+<blockquote>
+<p>&#x7B2C;&#x4E00;&#x6B21;&#x63E1;&#x624B;&#xFF08;SYN=1,Seq=x&#xFF09;</p>
+</blockquote>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;TCP&#x7684;SYN=1&#x7684;&#x5305;&#xFF0C;&#x544A;&#x77E5;&#x6253;&#x7B97;&#x8FDE;&#x63A5;&#x7684;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x548C;&#x521D;&#x59CB;&#x5E8F;&#x5217;X.</p>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x5165;<code>SN_SEND</code>&#x72B6;&#x6001;&#x3002;</p>
+<blockquote>
+<p>&#x7B2C;&#x4E8C;&#x6B21;&#x63E1;&#x624B;(SYN=1,ACK=1,Seq=y,ACKnum=x+1)</p>
+</blockquote>
+<p>&#x670D;&#x52A1;&#x5668;&#x53D1;&#x56DE;&#x786E;&#x8BA4;&#x5305;(ACK)&#x548C;&#x8BF7;&#x6C42;&#x8FDE;&#x63A5;(SYN)&#x7684;&#x5E94;&#x7B54;&#xFF0C;&#x5373;SYN=1&#xFF0C;ACK=1&#x3002;&#x670D;&#x52A1;&#x5668;&#x9009;&#x62E9;&#x81EA;&#x5DF1;&#x7684;&#x5E8F;&#x53F7;y&#xFF0C;&#x653E;&#x5728;Seq&#x57DF;&#x91CC;&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x786E;&#x8BA4;&#x5E8F;&#x53F7;&#x8BBE;&#x7F6E;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x62A5;&#x6587;&#x7684;Seq+1&#xFF0C;&#x5373;x+1&#x3002;</p>
+<p>&#x53D1;&#x9001;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x5165;<code>SYN_RCVD</code>&#x3002;</p>
+<blockquote>
+<p>&#x7B2C;&#x4E09;&#x6B21;&#x63E1;&#x624B;(ACK=1,ACKnum=y+1)</p>
+</blockquote>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x786E;&#x8BA4;&#x5305;(ACK=1),&#x540C;&#x65F6;&#x5C06;&#x786E;&#x8BA4;&#x5E8F;&#x5217;&#x53F7;&#x8BBE;&#x7F6E;&#x4E3A;y+1&#x3002;</p>
+<p>&#x53D1;&#x9001;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x5165;<code>ESTABLISHED</code>&#x72B6;&#x6001;&#xFF0C;&#x5F53;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x5305;&#x65F6;&#xFF0C;&#x4E5F;&#x8FDB;&#x5165;<code>ESTABLISHED</code>&#x72B6;&#x6001;&#xFF0C;TCP&#x63E1;&#x624B;&#x7ED3;&#x675F;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;</p>
+<p><img src="../image/TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;.jpg" alt="TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;"></p>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF1F;&#x800C;&#x4E0D;&#x662F;&#x4E24;&#x6B21;&#x63E1;&#x624B;&#xFF1F;</p>
+</blockquote>
+<p>&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x5931;&#x6548;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x6BB5;&#x88AB;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x63A5;&#x53D7;&#xFF0C;&#x4ECE;&#x800C;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x82E5;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x53EA;&#x9700;&#x4E24;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5E76;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x5E94;&#x7B54;&#x540E;&#x624D;&#x8FDB;&#x5165;ESTABLISHED&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x670D;&#x52A1;&#x7AEF;&#x5728;&#x6536;&#x5230;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x540E;&#x5C31;&#x8FDB;&#x5165;ESTABLISHED&#x72B6;&#x6001;&#x3002;&#x6B64;&#x65F6;&#x5982;&#x679C;&#x7F51;&#x7EDC;&#x62E5;&#x585E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x8FDF;&#x8FDF;&#x5230;&#x4E0D;&#x4E86;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4FBF;&#x8D85;&#x65F6;&#x91CD;&#x53D1;&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x7AEF;&#x6B63;&#x786E;&#x63A5;&#x6536;&#x5E76;&#x786E;&#x8BA4;&#x5E94;&#x7B54;&#xFF0C;&#x53CC;&#x65B9;&#x4FBF;&#x5F00;&#x59CB;&#x901A;&#x4FE1;&#xFF0C;&#x901A;&#x4FE1;&#x7ED3;&#x675F;&#x540E;&#x91CA;&#x653E;&#x8FDE;&#x63A5;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x90A3;&#x4E2A;&#x5931;&#x6548;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x62B5;&#x8FBE;&#x4E86;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x7531;&#x4E8E;&#x53EA;&#x6709;&#x4E24;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x5C31;&#x4F1A;&#x8FDB;&#x5165;ESTABLISHED&#x72B6;&#x6001;&#xFF0C;&#x7B49;&#x5F85;&#x53D1;&#x9001;&#x6570;&#x636E;&#x6216;&#x4E3B;&#x52A8;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;&#x4F46;&#x6B64;&#x65F6;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x65E9;&#x5DF2;&#x8FDB;&#x5165;CLOSED&#x72B6;&#x6001;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5C06;&#x4F1A;&#x4E00;&#x76F4;&#x7B49;&#x5F85;&#x4E0B;&#x53BB;&#xFF0C;&#x8FD9;&#x6837;&#x6D6A;&#x8D39;&#x670D;&#x52A1;&#x7AEF;&#x8FDE;&#x63A5;&#x8D44;&#x6E90;&#x3002;</p>
+<h2 id="2&#x3001;tcp&#x56DB;&#x6B21;&#x6325;&#x624B;">2&#x3001;TCP&#x56DB;&#x6B21;&#x6325;&#x624B;</h2>
+<p><img src="../image/TCP&#x56DB;&#x6B21;&#x6325;&#x624B;.png" alt="TCP&#x56DB;&#x6B21;&#x6325;&#x624B;"></p>
 
                                 
                                 </section>
@@ -275,7 +303,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TCP","level":"1.2.3","depth":2,"next":{"title":"WebScoket","level":"1.2.4","depth":2,"path":"network/webscoket.md","ref":"network/webscoket.md","articles":[]},"previous":{"title":"HTTPS","level":"1.2.2","depth":2,"path":"network/https.md","ref":"network/https.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"network/tcp.md","mtime":"2018-07-30T03:50:31.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-31T10:08:15.626Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TCP","level":"1.2.3","depth":2,"next":{"title":"WebScoket","level":"1.2.4","depth":2,"path":"network/webscoket.md","ref":"network/webscoket.md","articles":[]},"previous":{"title":"HTTPS","level":"1.2.2","depth":2,"path":"network/https.md","ref":"network/https.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"network/tcp.md","mtime":"2018-08-01T12:34:22.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-01T12:34:27.168Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
