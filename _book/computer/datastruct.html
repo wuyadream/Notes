@@ -280,80 +280,259 @@
 <h2 id="&#x54C8;&#x5E0C;&#x8868;">&#x54C8;&#x5E0C;&#x8868;</h2>
 <p>&#x54C8;&#x5E0C;&#x8868;&#x4E5F;&#x53EB;&#x6563;&#x5217;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x8F93;&#x5165;&#x503C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x6D88;&#x606F;&#x6458;&#x8981;&#x3002;&#x7406;&#x60F3;&#x7684;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x8F93;&#x5165;&#x5E94;&#x8BE5;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x540C;&#x65F6;&#x6563;&#x5217;&#x7ED3;&#x679C;&#x5E94;&#x5F53;&#x5177;&#x6709;&#x540C;&#x4E00;&#x6027;&#x548C;&#x96EA;&#x5D29;&#x6548;&#x5E94;&#x3002;</p>
 <p>&#x5728;js&#x4E2D;&#xFF0C;object&#x5C5E;&#x6027;&#x7684;&#x5B9E;&#x73B0;&#x5C31;&#x662F;hash&#x8868;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x8981;&#x5728;object&#x4E0A;&#x7B80;&#x5355;&#x5C01;&#x88C5;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;object&#x7BA1;&#x7406;&#x5B9E;&#x73B0;&#x9AD8;&#x6548;&#x7684;hashtable&#x4E86;&#x3002;</p>
-<pre><code>function HashTable() {
-    var size = 0;
-    var entry = new Object();
-
-    this.add = function (key , value) {
-        if(!this.containsKey(key))
-        {
-            size ++ ;
+<pre><code>    class HashTable  {
+        constructor() {
+            this.hashTable = new Object();
+            this.size = 0;
         }
-        entry[key] = value;
-    }
 
-    this.getValue = function (key) {
-        return this.containsKey(key) ? entry[key] : null;
-    }
-
-    this.remove = function ( key ) {
-        if( this.containsKey(key) &amp;&amp; ( delete entry[key] ) )
-        {
-            size --;
+        _hasKey(key) { // private fucntion
+            return (key in this.hashTable);
         }
-    }
 
-    this.containsKey = function ( key ) {
-        return (key in entry);
-    }
-
-    this.containsValue = function ( value ) {
-        for(var prop in entry)
-        {
-            if(entry[prop] == value)
-            {
-                return true;
+        add(key, value) {
+            if(!this._hasKey(key)) {
+                this.hashTable[key] = value;
+                this.size++;
             }
         }
-        return false;
-    }
 
-    this.getValues = function () {
-        var values = new Array();
-        for(var prop in entry)
-        {
-            values.push(entry[prop]);
+        remove(key) {
+            if(this._hasKey) {
+                delete this.hashTable[key];
+                this.size--;
+            }
         }
-        return values;
-    }
 
-    this.getKeys = function () {
-        var keys = new Array();
-        for(var prop in entry)
-        {
-            keys.push(prop);
+        getValue(key) {
+            if(this._hasKey(key)) {
+                return this.hashTable[key];
+            }
+            return null;
         }
-        return keys;
-    }
 
-    this.getSize = function () {
-        return size;
-    }
+        getSize() {
+            return this.size;
+        }
 
-    this.clear = function () {
-        size = 0;
-        entry = new Object();
+        clear() {
+            this.hashTable = new Object();
+            this.size = 0;
+        }
     }
-}
 </code></pre><h2 id="&#x961F;&#x5217;">&#x961F;&#x5217;</h2>
 <p>&#x961F;&#x5217;&#x662F;FIFO&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#xFF0C;&#x65B0;&#x589E;&#x52A0;&#x7684;&#x5143;&#x7D20;&#x653E;&#x5728;&#x961F;&#x5C3E;&#xFF0C;&#x8981;&#x79FB;&#x9664;&#x7684;&#x5143;&#x7D20;&#x5728;&#x961F;&#x5217;&#x7684;&#x9876;&#x90E8;&#x3002;</p>
-<pre><code>
+<pre><code>        class Queue {
+            constructor() {
+                this.queue = [];
+            }
 
+            enqueue(item) { // &#x6DFB;&#x52A0;&#x5143;&#x7D20;
+                if (typeof item != &apos;undefined&apos;) {
+                    this.queue.push(item);
+                }
+            }
+
+            dequeue() { // &#x79FB;&#x9664;&#x961F;&#x9876;&#x5143;&#x7D20;
+                if (this.queue.length &gt; 0) {
+                    return this.queue.shift();
+                }
+                return undefined;
+            }
+
+            front() { // &#x83B7;&#x53D6;&#x961F;&#x9876;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x79FB;&#x9664;
+                if (this.queue.size &gt; 0) {
+                    return this.queue[0];
+                }
+                return undefined;
+            }
+
+            isEmpty() { // &#x5224;&#x65AD;&#x961F;&#x5217;&#x662F;&#x5426;&#x4E3A;&#x7A7A;
+                if (this.queue.size &gt; 0) {
+                    return false;
+                }
+                return true;
+            }
+
+            getLength() { // &#x83B7;&#x53D6;&#x961F;&#x5217;&#x957F;&#x5EA6;
+                let length = this.queue.length;
+                return length;
+            }
+
+            clear() { // &#x6E05;&#x7A7A;&#x961F;&#x5217;
+                this.queue = [];
+            }
+
+            print() { // &#x7528;&#x4E8E;&#x6253;&#x5370;&#x89C2;&#x5BDF;&#x961F;&#x5217;&#x7684;&#x60C5;&#x51B5;
+                this.queue.forEach((item, index) =&gt; {
+                    console.log(`${index} = ${item}`);
+                })
+            }
+        }
 </code></pre><h2 id="&#x6808;">&#x6808;</h2>
-<h2 id="&#x94FE;&#x8868;">&#x94FE;&#x8868;</h2>
-<h2 id="&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;">&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;</h2>
+<p>&#x6808;&#x662F;LIFO&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#xFF0C;&#x53EA;&#x5728;&#x8868;&#x5C3E;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x548C;&#x63D2;&#x5165;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code>        class Stack {
+            constructor() {
+                this.stack = [];
+            }
+
+            push(item) { // &#x5165;&#x6808;
+                this.stack.push(item);
+            }
+
+            pop() { // &#x51FA;&#x6808;
+                return this.stack.pop();
+            }
+
+            peak() { // &#x8FD4;&#x56DE;&#x6808;&#x9876;&#x5143;&#x7D20;
+                if (this.stack.length &gt; 0) {
+                    return this.stack[this.stack.length - 1];
+                }
+                return undefined;
+            }
+
+            clear() { // &#x6E05;&#x7A7A;&#x6808;&#x5185;&#x6240;&#x6709;&#x5143;&#x7D20;
+                this.stack = [];
+            }
+
+            isEmpty() { // &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7A7A;
+                return !(this.stack.length &gt; 0);
+            }
+
+            print() { // &#x7528;&#x4E8E;&#x6253;&#x5370;&#x89C2;&#x5BDF;&#x6808;&#x7684;&#x60C5;&#x51B5;
+                this.stack.forEach((item, index) =&gt; {
+                    console.log(`${index} = ${item}`);
+                })
+            }
+        }
+</code></pre><h2 id="&#x94FE;&#x8868;">&#x94FE;&#x8868;</h2>
+<p>&#x94FE;&#x8868;&#x662F;&#x7531;&#x4E00;&#x7EC4;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x7D22;&#x5F15;&#x6765;&#x6307;&#x5411;&#x5B83;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;&#x6307;&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5F15;&#x7528;&#x53EB;&#x505A;&#x94FE;&#x3002;</p>
+<pre><code>        class Node {
+            constructor(element) {
+                this.element = element; // &#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x5143;&#x7D20;
+                this.next = null; // &#x6307;&#x5411;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;
+            }
+        }
+
+        class LList {
+            constructor(element) {
+                let node = new Node(element);
+                this.headNode = node; // &#x5934;&#x7ED3;&#x70B9;
+            }
+
+            insert(newElement, element) { // &#x63D2;&#x5165;&#x8282;&#x70B9;
+                let preNode = this.find(element);
+                if (preNode) {
+                    let node = new Node(newElement);
+                    node.next = preNode.next;
+                    preNode.next = node;
+                }
+            }
+
+            remove(element) { // &#x5220;&#x9664;&#x8282;&#x70B9;&#xFF0C;&#x6CE8;&#x610F;headNode&#x7684;&#x6307;&#x5411;
+                if(this.headNode.element == element) {
+                    this.headNode = this.headNode.next;
+                    return true;
+                }
+                let preNode = this.findPrev(element);
+                if (preNode) {
+                    preNode.next = preNode.next.next;
+                }
+            }
+
+            find(element) { // &#x67E5;&#x627E;&#x8282;&#x70B9;
+                let currentNode = this.headNode;
+                while (currentNode != null &amp;&amp; currentNode.element != element) {
+                    currentNode = currentNode.next;
+                }
+                return currentNode;
+            }
+
+            findPrev(element) { // &#x67E5;&#x627E;&#x524D;&#x4E00;&#x4E2A;&#x8282;&#x70B9;
+                let preNode = null, currentNode = this.headNode;
+                while (currentNode != null &amp;&amp; currentNode.element != element) {
+                    preNode = currentNode;
+                    currentNode = currentNode.next;
+                }
+                if (currentNode == null) {
+                    return null;
+                }
+                return preNode;
+            }
+        }
+</code></pre><h2 id="&#x53CC;&#x5411;&#x94FE;&#x8868;">&#x53CC;&#x5411;&#x94FE;&#x8868;</h2>
+<p>&#x867D;&#x7136;&#x4ECE;&#x94FE;&#x8868;&#x7684;&#x5934;&#x7ED3;&#x70B9;&#x904D;&#x5386;&#x94FE;&#x8868;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x53CD;&#x8FC7;&#x6765;&#xFF0C;&#x4ECE;&#x540E;&#x5411;&#x524D;&#x904D;&#x5386;&#x5C31;&#x5F88;&#x96BE;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x4ECE;&#x540E;&#x5411;&#x524D;&#x7684;&#x904D;&#x5386;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x7ED9;Dnode&#x7C7B;&#x589E;&#x52A0;&#x4E00;&#x4E2A;previous&#x5C5E;&#x6027;&#xFF0C;&#x6307;&#x5411;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x3002;</p>
+<p>```        class Dnode {
+            constructor(element) {
+                this.element = element;
+                this.next = null;
+                this.previous = null;
+            }
+        }</p>
+<pre><code>    class DlList {
+        constructor(element) {
+            let headNode = new Dnode(element);
+            this.headNode = headNode;
+        }
+
+        insert(newElement, element) { // &#x63D2;&#x5165;&#x8282;&#x70B9;
+            let preNode = this.find(element);
+            if (preNode) {
+                let node = new Dnode(newElement);
+                node.previous = preNode;
+                node.next = preNode.next;
+                preNode.next = node;
+                node.next &amp;&amp; (node.next.previous = node);
+            }
+        }
+
+        remove(element) { // &#x5220;&#x9664;&#x8282;&#x70B9;,&#x6CE8;&#x610F;headNode&#x7684;&#x6307;&#x5411;
+            let currentNode = this.find(element);
+            if(this.headNode.element == element) {
+                this.headNode = this.headNode.next;
+            }
+            currentNode.previous &amp;&amp; (currentNode.previous.next = currentNode.next);
+            currentNode.next &amp;&amp; (currentNode.next.previous = currentNode.previous);
+        }
+
+        find(element) { // &#x67E5;&#x627E;&#x8282;&#x70B9;
+            let currentNode = this.headNode;
+            while (currentNode != null &amp;&amp; currentNode.element != element) {
+                currentNode = currentNode.next;
+            }
+            return currentNode;
+        }
+    }
+</code></pre><pre><code>
+## &#x4E8C;&#x53C9;&#x6811;&#x548C;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;
+
+&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x4E00;&#x79CD;&#x6811;&#x578B;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x7684;&#x7279;&#x70B9;&#x662F;&#x6BCF;&#x4E2A;&#x7ED3;&#x70B9;&#x81F3;&#x591A;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#xFF0C;&#x5E76;&#x4E14;&#xFF0C;&#x4E8C;&#x53C9;&#x6811;&#x6709;&#x5DE6;&#x53F3;&#x4E4B;&#x5206;&#xFF0C;&#x6B21;&#x5E8F;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x98A0;&#x5012;&#x3002;
+
+&gt; &#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6027;&#x8D28;&#xFF1A;
+</code></pre><p>&#xFF08;&#x4E00;&#xFF09;&#x5728;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x7B2C;i&#xFF08;i&gt;=1&#xFF09;&#x5C42;&#x81F3;&#x591A;&#x6709;2^(i-1)&#x4E2A;&#x7ED3;&#x70B9;&#x3002;
+&#xFF08;&#x4E8C;&#xFF09;&#x6DF1;&#x5EA6;&#x4E3A;k&#xFF08;k&gt;=1&#xFF09;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x81F3;&#x591A;&#x6709;2^K-1&#x4E2A;&#x7ED3;&#x70B9;&#x3002;
+&#xFF08;&#x4E09;&#xFF09;&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x4E00;&#x9897;&#x4E8C;&#x53C9;&#x6811;T&#xFF0C;&#x5982;&#x679C;&#x5176;&#x7EC8;&#x7AEF;&#x7ED3;&#x70B9;&#x4E3A;n0,&#x5EA6;&#x4E3A;2&#x7684;&#x7ED3;&#x70B9;&#x6570;&#x4E3A;n2,&#x5219;n0=n2+1&#x3002;
+      &#x6EE1;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x6DF1;&#x5EA6;&#x4E3A;k&#x4E14;&#x6709;2^k-1&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x3002;
+      &#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#xFF1A;&#x6DF1;&#x5EA6;&#x4E3A;k&#x7684;&#xFF0C;&#x6709;n&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x5176;&#x6BCF;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x90FD;&#x4E0E;&#x6DF1;&#x5EA6;&#x4E3A;k&#x7684;&#x6EE1;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x7684;&#x7F16;&#x53F7;&#x4ECE;1&#x5230;n&#x7684;&#x7ED3;&#x70B9;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x65F6;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x3002;
+&#xFF08;&#x56DB;&#xFF09;&#x4E00;&#x4E2A;&#x5177;&#x6709;n&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6DF1;&#x5EA6;&#x4E3A;Math.floor(log2 n)+1&#x3002;
+&#xFF08;&#x4E94;&#xFF09;&#x5982;&#x679C;&#x5BF9;&#x4E00;&#x9897;&#x6709;n&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#xFF08;&#x5176;&#x6DF1;&#x5EA6;&#x4E3A;Math.floor(log2 n)+1&#xFF09;&#x7684;&#x7ED3;&#x70B9;&#x6309;&#x5C42;&#x7F16;&#x53F7;&#xFF0C;&#x5219;&#x5BF9;&#x4EFB;&#x4E00;&#x7ED3;&#x70B9;&#xFF08;1&lt;=i&lt;=n&#xFF09;&#x6709;&#xFF1A;
+     a.&#x5982;&#x679C;i=1&#xFF0C;&#x5219;&#x7ED3;&#x70B9;i&#x662F;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x63A5;&#x70B9;&#xFF0C;&#x6CA1;&#x6709;&#x53CC;&#x4EB2;&#x3002;&#x5982;&#x679C;i&gt;1,&#x5219;&#x5176;&#x53CC;&#x4EB2;parent(i)&#x662F;&#x7ED3;&#x70B9;Math.floor(i/2);
+     b.&#x5982;&#x679C;2<em>i&gt;n&#xFF0C;&#x5219;&#x7ED3;&#x70B9;i&#x65E0;&#x5DE6;&#x5B69;&#x5B50;&#x3002;&#x5426;&#x5219;&#x5176;&#x5DE6;&#x5B69;&#x5B50;&#x7ED3;&#x70B9;&#x662F;2</em>i;
+     c.&#x5982;&#x679C;2<em>1+1&gt;n,&#x5219;&#x7ED3;&#x70B9;&#x65E0;&#x53F3;&#x5B69;&#x5B50;&#x3002;&#x5426;&#x5219;&#x5176;&#x53F3;&#x5B69;&#x5B50;&#x7ED3;&#x70B9;&#x662F;2</em>i+1&#x3002;
+&#xFF08;&#x516D;&#xFF09;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#xFF1A;&#x4E00;&#x68F5;&#x7A7A;&#x6811;&#x6216;&#x5B83;&#x7684;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x8D85;&#x8FC7;1&#xFF0C;&#x5E76;&#x4E14;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x90FD;&#x662F;&#x4E00;&#x68F5;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+<pre><code>
+![&#x4E8C;&#x53C9;&#x6811;](../image/&#x4E8C;&#x53C9;&#x6811;.jpg)
+
+
+&gt; &#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;&#x65B9;&#x5F0F;&#xFF1A;
+</code></pre><p>&#xFF08;&#x4E00;&#xFF09;&#x5148;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5148;&#x8BBF;&#x95EE;&#x6839;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5206;&#x522B;&#x5148;&#x5E8F;&#x904D;&#x5386;&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x3002;
+&#xFF08;&#x4E8C;&#xFF09;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5148;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x7136;&#x540E;&#x8BBF;&#x95EE;&#x6839;&#x8282;&#x70B9;&#x548C;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x53F3;&#x5B50;&#x6811;&#x3002;
+&#xFF08;&#x4E09;&#xFF09;&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5148;&#x540E;&#x5E8F;&#x904D;&#x5386;&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x3002;&#x7136;&#x540E;&#x8BBF;&#x95EE;&#x6839;&#x8282;&#x70B9;&#x3002;
+```</p>
 <h2 id="&#x53C2;&#x8003;&#x6587;&#x6863;">&#x53C2;&#x8003;&#x6587;&#x6863;</h2>
 <p><a href="https://www.cnblogs.com/hyl8218/archive/2010/01/18/1650589.html" target="_blank">&#x54C8;&#x5E0C;&#x8868;(hashtable)&#x7684;javascript&#x7B80;&#x5355;&#x5B9E;&#x73B0;</a></p>
+<p><a href="https://segmentfault.com/a/1190000011374405" target="_blank">JavaScript&#x6570;&#x636E;&#x7ED3;&#x6784;&#x300A;&#x961F;&#x5217;&#x300B;</a></p>
+<p><a href="https://www.cnblogs.com/webFrontDev/p/3865719.html" target="_blank">javascript&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A; &#x6811;&#x548C;&#x4E8C;&#x53C9;&#x6811;,&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;&#x548C;&#x57FA;&#x672C;&#x64CD;&#x4F5C;</a></p>
 
                                 
                                 </section>
@@ -397,7 +576,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据结构","level":"1.3.1","depth":2,"next":{"title":"常用算法","level":"1.3.2","depth":2,"path":"computer/algorithm.md","ref":"computer/algorithm.md","articles":[]},"previous":{"title":"计算机基础","level":"1.3","depth":1,"path":"computer/README.md","ref":"computer/README.md","articles":[{"title":"数据结构","level":"1.3.1","depth":2,"path":"computer/datastruct.md","ref":"computer/datastruct.md","articles":[]},{"title":"常用算法","level":"1.3.2","depth":2,"path":"computer/algorithm.md","ref":"computer/algorithm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"computer/datastruct.md","mtime":"2018-08-02T12:30:06.927Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T12:30:13.131Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据结构","level":"1.3.1","depth":2,"next":{"title":"常用算法","level":"1.3.2","depth":2,"path":"computer/algorithm.md","ref":"computer/algorithm.md","articles":[]},"previous":{"title":"计算机基础","level":"1.3","depth":1,"path":"computer/README.md","ref":"computer/README.md","articles":[{"title":"数据结构","level":"1.3.1","depth":2,"path":"computer/datastruct.md","ref":"computer/datastruct.md","articles":[]},{"title":"常用算法","level":"1.3.2","depth":2,"path":"computer/algorithm.md","ref":"computer/algorithm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"computer/datastruct.md","mtime":"2018-08-03T10:34:05.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-03T11:14:48.030Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2,7 +2,7 @@
 
 做Web开发首先要保证网站或网页的安全性。了解常见的网站攻击方式是一个合格的web开发者的基本功力，只有做好了安全防护，才能保证网站的可靠性和可用性。
 
-## XSS
+## 1、XSS
 
 XSS(Cross Site Script, 跨站脚本攻击)，是攻击者在Web页面中插入恶意脚本，当用户浏览页面时，促使脚本执行，从而达到攻击目的的一种攻击方式。其特点是攻击者会想方设法地在目标网站上执行第三方脚本。
 
@@ -29,7 +29,7 @@ XSS(Cross Site Script, 跨站脚本攻击)，是攻击者在Web页面中插入�
 - 设置`NTTP Header: "X-XSS-Protection:1"`
 
 
-## CSRF
+## 2、CSRF
 
 CSRF(Cross Site Request Forgery，跨站请求伪造)，冒充用户在站内进行操作请求，达到攻击的目的。
 
@@ -45,7 +45,7 @@ CSRF(Cross Site Request Forgery，跨站请求伪造)，冒充用户在站内进
 
 
 
-## 参考文献
+## 3、参考文献
 
 [web安全入门之常见攻击](https://zhuanlan.zhihu.com/p/23309154)
 
