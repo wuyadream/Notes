@@ -1,6 +1,6 @@
 # 数据结构
 
-## 哈希表
+## 1、哈希表
 
 哈希表也叫散列函数，它对不同的输入值得到一个固定长度的消息摘要。理想的哈希函数对于不同的输入应该产生不同的结果，同时散列结果应当具有同一性和雪崩效应。
 
@@ -49,7 +49,7 @@
     }
 ```
 
-## 队列
+## 2、队列
 
 队列是FIFO的有序集合，新增加的元素放在队尾，要移除的元素在队列的顶部。
 
@@ -104,7 +104,7 @@
 
 ```
 
-## 栈
+## 3、栈
 
 栈是LIFO的有序集合，只在表尾进行删除和插入的操作。
 
@@ -145,7 +145,7 @@
         }
 ```
 
-## 链表
+## 4、链表
 
 链表是由一组节点组成的集合，每个节点都使用一个对象的索引来指向它后一个节点。指向另一个节点的引用叫做链。
 
@@ -206,11 +206,12 @@
 
 ```
 
-## 双向链表
+## 5、双向链表
 
 虽然从链表的头结点遍历链表很简单，但是反过来，从后向前遍历就很难。为了使从后向前的遍历变得简单，我们给Dnode类增加一个previous属性，指向前一个元素，这就是双向链表。
 
-```        class Dnode {
+```        
+        class Dnode {
             constructor(element) {
                 this.element = element;
                 this.next = null;
@@ -255,7 +256,8 @@
 
 ```
 
-## 二叉树和平衡二叉树
+
+## 6、二叉树和平衡二叉树
 
 二叉树是一种树型结构，它的特点是每个结点至多只有两个子树，并且，二叉树有左右之分，次序不能随意颠倒。
 
@@ -275,6 +277,7 @@
 （六）平衡二叉树满足以下条件：一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。
 ```
 
+
 ![二叉树](../image/二叉树.jpg)
 
 
@@ -286,7 +289,73 @@
 （三）后序遍历：先后序遍历左子树和右子树。然后访问根节点。
 ```
 
-## 参考文档
+二叉树的数据结构和遍历算法实现如下：
+
+```
+        class TNode {
+            constructor(element, leftChild, rightChild) {
+                this.element = element;
+                this.leftChild = leftChild || null;
+                this.rightChild = rightChild || null;
+            }
+        }
+
+        class BinaryTree {
+            constructor(element) {
+                this.rootNode = new TNode(element);
+            }
+
+            add(element, parent, type) { // 添加结点
+                let node = new TNode(element);
+                let parentNode = this.find(parent, this.rootNode);
+                if(parentNode) {
+                    parentNode[type] = node;
+                }
+            }
+
+            find(element, rootNode) { // 查找结点
+                if (!rootNode) {
+                    return null;
+                }
+                if (rootNode.element === element) {
+                    return rootNode;
+                } else {
+                    return this.find(element,rootNode.leftChild) || this.find(element,rootNode.rightChild);
+                }
+            }
+
+            visit(node) { // 遍历
+                console.log(node.element);
+            }
+
+            preOrderTraverse(rootNode) { // 先序遍历
+                rootNode = rootNode || this.rootNode;
+                this.visit(rootNode);
+                rootNode.leftChild && this.preOrderTraverse(rootNode.leftChild);
+                rootNode.rightChild && this.preOrderTraverse(rootNode.rightChild);
+            }
+
+            inOrderTraverse(rootNode) { // 中序遍历
+            rootNode = rootNode || this.rootNode;
+            rootNode.leftChild && this.inOrderTraverse(rootNode.leftChild);
+            this.visit(rootNode);
+            rootNode.rightChild && this.inOrderTraverse(rootNode.rightChild);
+            }
+
+            postOrderTraverse(rootNode) { // 后序遍历
+            rootNode = rootNode || this.rootNode;
+            rootNode.leftChild && this.postOrderTraverse(rootNode.leftChild);
+            rootNode.rightChild && this.postOrderTraverse(rootNode.rightChild);
+            this.visit(rootNode);
+            }
+        }
+```
+
+## 7、本节源码
+
+[源码地址](../sourceCode/datastruct.js)
+
+## 8、参考文档
 
 [哈希表(hashtable)的javascript简单实现](https://www.cnblogs.com/hyl8218/archive/2010/01/18/1650589.html)
 
