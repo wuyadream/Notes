@@ -231,6 +231,51 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" data-path="../browser/">
+            
+                <a href="../browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../browser/render.html">
+            
+                <a href="../browser/render.html">
+            
+                    
+                    浏览器渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../browser/cache.html">
+            
+                <a href="../browser/cache.html">
+            
+                    
+                    Web缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -662,6 +707,49 @@ Content-Length:112
 <p><strong>&#x5BF9;&#x6BD4;&#x5F3A;&#x5236;&#x7F13;&#x5B58;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x901A;&#x77E5;&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x7F13;&#x5B58;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x4E0B;&#x6B21;&#x8BF7;&#x6C42;&#x53EF;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#xFF0C;&#x8D85;&#x8FC7;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x5219;&#x9700;&#x8981;&#x6267;&#x884C;&#x6BD4;&#x8F83;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#x3002;</strong>
 <strong>&#x5BF9;&#x4E8E;&#x6BD4;&#x8F83;&#x7F13;&#x5B58;&#xFF0C;&#x5C06;&#x7F13;&#x5B58;&#x4FE1;&#x606F;&#x7684;ETag&#x548C;Lsat-Modified&#x901A;&#x8FC7;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531;&#x670D;&#x52A1;&#x5668;&#x6821;&#x9A8C;&#xFF0C;&#x8FD4;&#x56DE;304&#x72B6;&#x6001;&#x7801;&#x53EF;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x3002;</strong></p>
 <p><img src="../image/&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x673A;&#x5236;.png" alt="&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x673A;&#x5236;"></p>
+<p>5.&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x884C;&#x4E3A;&#x4E0E;&#x7F13;&#x5B58;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6237;&#x64CD;&#x4F5C;</th>
+<th>Expries/Cache-Control</th>
+<th>Last-Modified/Etag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5730;&#x5740;&#x680F;&#x56DE;&#x8F66;</td>
+<td>&#x6709;&#x6548;</td>
+<td>&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>&#x9875;&#x9762;&#x94FE;&#x63A5;&#x8DF3;&#x8F6C;</td>
+<td>&#x6709;&#x6548;</td>
+<td>&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>&#x65B0;&#x5F00;&#x7A97;&#x53E3;</td>
+<td>&#x6709;&#x6548;</td>
+<td>&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>&#x524D;&#x8FDB;&#x540E;&#x9000;</td>
+<td>&#x6709;&#x6548;</td>
+<td>&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>F5&#x5237;&#x65B0;</td>
+<td>&#x65E0;&#x6548;</td>
+<td>&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>Ctrl+F5&#x5F3A;&#x5236;&#x5237;&#x65B0;</td>
+<td>&#x65E0;&#x6548;</td>
+<td>&#x65E0;&#x6548;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x8868;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;F5&#x5237;&#x65B0;&#x65F6;&#xFF0C;&#x4F1A;&#x5FFD;&#x7565;Expries/Cache-Control&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x53BB;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x800C;Last-Modified/Etag&#x8FD8;&#x662F;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x5224;&#x65AD;&#x8FD4;&#x56DE;304&#x8FD8;&#x662F;200&#x3002;&#x800C;&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;Ctrl&#x548C;F5&#x8FDB;&#x884C;&#x5F3A;&#x5236;&#x5237;&#x65B0;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x90FD;&#x5C06;&#x5931;&#x6548;&#xFF0C;&#x91CD;&#x65B0;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x62C9;&#x53D6;&#x8D44;&#x6E90;&#x3002;</p>
 <h2 id="8&#x3001;http10&#x3001;http11&#x4E0E;http20">8&#x3001;HTTP/1.0&#x3001;HTTP/1.1&#x4E0E;HTTP/2.0</h2>
 <table>
 <thead>
@@ -735,7 +823,7 @@ Content-Length:112
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTTP","level":"1.2.1","depth":2,"next":{"title":"HTTPS","level":"1.2.2","depth":2,"path":"network/https.md","ref":"network/https.md","articles":[]},"previous":{"title":"网络基础","level":"1.2","depth":1,"path":"network/README.md","ref":"network/README.md","articles":[{"title":"HTTP","level":"1.2.1","depth":2,"path":"network/http.md","ref":"network/http.md","articles":[]},{"title":"HTTPS","level":"1.2.2","depth":2,"path":"network/https.md","ref":"network/https.md","articles":[]},{"title":"TCP","level":"1.2.3","depth":2,"path":"network/tcp.md","ref":"network/tcp.md","articles":[]},{"title":"WebSocket","level":"1.2.4","depth":2,"path":"network/websocket.md","ref":"network/websocket.md","articles":[]},{"title":"前端安全","level":"1.2.5","depth":2,"path":"network/secure.md","ref":"network/secure.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"network/http.md","mtime":"2018-08-01T03:15:18.825Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-05T14:31:14.601Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTTP","level":"1.2.1","depth":2,"next":{"title":"HTTPS","level":"1.2.2","depth":2,"path":"network/https.md","ref":"network/https.md","articles":[]},"previous":{"title":"网络基础","level":"1.2","depth":1,"path":"network/README.md","ref":"network/README.md","articles":[{"title":"HTTP","level":"1.2.1","depth":2,"path":"network/http.md","ref":"network/http.md","articles":[]},{"title":"HTTPS","level":"1.2.2","depth":2,"path":"network/https.md","ref":"network/https.md","articles":[]},{"title":"TCP","level":"1.2.3","depth":2,"path":"network/tcp.md","ref":"network/tcp.md","articles":[]},{"title":"WebSocket","level":"1.2.4","depth":2,"path":"network/websocket.md","ref":"network/websocket.md","articles":[]},{"title":"前端安全","level":"1.2.5","depth":2,"path":"network/secure.md","ref":"network/secure.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"network/http.md","mtime":"2018-08-06T10:50:16.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-06T10:50:35.181Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
