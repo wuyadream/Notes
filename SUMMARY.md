@@ -13,4 +13,8 @@
 * [浏览器](browser/README.md)
     * [浏览器渲染](browser/render.md)
     * [Web缓存](browser/cache.md)
+* [JavaScript](js/README.md)
+    * [JavaScript必知必会(一)](js/js1.md)
+    * [JavaScript必知必会(二)](js/js2.md)
+    * [原型链与继承](js/extend.md)
 

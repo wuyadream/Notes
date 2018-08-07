@@ -57,8 +57,9 @@ SQL注入攻击是输入参数未经过滤，然后直接拼接到SQL语句当�
 
 - 利用MySQL的预编译机制。当绑定的参数传到MySQL服务器，MySQL服务器对参数进行编译，即填充到相应的占位符的过程中，做了转义操作。
 
-## 3、参考文献
+## 4、参考文献
 
 [web安全入门之常见攻击](https://zhuanlan.zhihu.com/p/23309154)
+
 [SQL注入攻击常见方式及测试方法](https://blog.csdn.net/github_36032947/article/details/78442189)
 

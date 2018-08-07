@@ -247,6 +247,18 @@ Cache-Control的值可以自由组合可选值，但是也有些限制，比如n
 
 通过上表可以发现，当用户按下F5刷新时，会忽略Expries/Cache-Control的设置，再次发送请求去服务器，而Last-Modified/Etag还是有效的，服务器会根据情况判断返回304还是200。而当用户按下Ctrl和F5进行强制刷新时，所有的缓存机制都将失效，重新从服务器拉取资源。
 
+6.不能被缓存的请求
+
+无法被浏览器缓存的请求：
+
+```
+1.HTTP信息头中包含Cache-Control:no-cache,pragma:no-cache,或Cache-Control:max-age=0等告诉浏览器不用缓存请求。
+2.需要根据Cookie，认证信息等决定输入内容的动态请求是不能缓存的。
+3.经过HTTPS安全加密的请求。也有人测试发现，IE在头部加入Cache-Control:max-age信息，firefox在头部加入Cache-Control:Public之后，能够对HTTPS的资源进行缓存。
+4.POST请求无法缓存。
+5.HTTP响应头不包含Last-Modified/Etag，也不包含Cache-Control/Expires请求无法被缓存。
+
+```
 
 ## 8、HTTP/1.0、HTTP/1.1与HTTP/2.0
 
@@ -262,3 +274,7 @@ Cache-Control的值可以自由组合可选值，但是也有些限制，比如n
 [彻底弄懂HTTP缓存机制及原理](http://www.cnblogs.com/chenqf/p/6386163.html)
 
 [浅谈浏览器http的缓存机制](https://www.cnblogs.com/vajoy/p/5341664.html)
+
+[Web缓存机制系列](http://www.alloyteam.com/2012/03/web-cache-2-browser-cache/#prettyPhoto)
+
+[HTTPS的七个误解](http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html)
