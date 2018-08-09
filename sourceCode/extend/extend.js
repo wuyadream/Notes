@@ -207,4 +207,67 @@ class Son extends Father {
 
 var instance1 = new Son('Lious', 20);
 instance1.sayName(); // Lious
-instance1.sayAge(); // 20
+instance1.sayAge(); // 20 */
+
+// 7.重载
+
+function add() {
+    var count = 0;
+    for(var i=0; i< arguments.length; i++) {
+        count += arguments[i];
+    }
+    console.log(count);
+    return count;
+}
+
+add(1,2); // 3
+add(1,2,3); // 6
+add(4,5,6,7); // 12
+
+function add(param1, param2) {
+    if(typeof(param1) == 'number' && typeof(param2) == 'number') {
+        return param1+param2;
+    } else {
+        return param1.toString() + param2.toString();
+    }
+}
+
+add(1,2); // 3
+add('hello ', 'world'); // hello world
+
+// 8.多态
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    run() {
+        console.log('Animal is running...');
+    }
+}
+
+class Cat extends Animal {
+    constructor(name) {
+        super(name);
+    }
+
+    run() {
+        console.log('Cat is running...');
+    }
+}
+
+class Dog extends Animal {
+    constructor(name) {
+        super(name);
+    }
+
+    run() {
+        console.log('dog is running...');
+    }
+}
+
+var cat = new Cat('cat');
+var dog = new Dog('dog');
+cat.run(); // Cat is running...
+dog.run(); // dog is running...
