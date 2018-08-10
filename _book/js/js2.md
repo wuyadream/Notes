@@ -1,12 +1,12 @@
 # JavaScript必知必会(二)
 
-## 1.js阻止事件冒泡及默认事件，兼容IE
+## js阻止事件冒泡及默认事件，兼容IE
 
-#### 1.事件兼容
+#### 事件兼容
 
 除IE/Opera外浏览器的事件是`event`,IE/Opera浏览器事件是`window.event`。
 
-#### 2.防止冒泡
+#### 防止冒泡
 
 w3c的方法是`event.stopPropagation()`,IE则是使用`event.cancelBubble=true`来防止冒泡。所以阻止冒泡的正确写法是：
 
@@ -20,7 +20,7 @@ function stopBubble(e) {
 }
 ```
 
-#### 3.阻止默认行为
+#### 阻止默认行为
 
 w3c的方法是`e.preventDefault()`,IE则是使用`e.returnValue=false`来阻止默认行为。所以阻止默认行为的兼容写法是；
 
@@ -35,7 +35,7 @@ function stopDefault(e) {
 }
 ```
 
-## 2.实现一个jQuery插件
+## 实现一个jQuery插件
 
 jQuery插件就是用来扩展jQuery原型对象的一个方法，简单来说就是jquery插件就是jQuery的一个方法。那么，编写一个jQuery插件，我们需要注意什么呢？
 
@@ -74,11 +74,11 @@ getFontSize = function(el) {
 $.fn.fontLarger.defaults.step = 3; // 全局修改默认值
 ```
 
-## 3.js实现测试接口请求耗时
+## js实现测试接口请求耗时
 
 有两种方法可以得到js程序的耗时，第一种方法是记录开始和结束时间戳，然后计算出差值。第二种方法是使用`console.time()`函数定义一个计时器，得到程序执行消耗的时间。
 
-> 法一：使用时间戳获得接口请求耗时
+> 使用时间戳获得接口请求耗时
 
 ```
      var startTimeStamp = new Date().getTime();
@@ -88,7 +88,7 @@ $.fn.fontLarger.defaults.step = 3; // 全局修改默认值
     })
 ```
 
-> 法二：使用`console.time()`函数获得接口耗时
+> 使用`console.time()`函数获得接口耗时
 
 ```
     console.time('request'); // 定义计时器
@@ -98,6 +98,6 @@ $.fn.fontLarger.defaults.step = 3; // 全局修改默认值
 
 ```
 
-## 4.参考文献
+## 参考文献
 
 [JavaScript教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)

@@ -10,5 +10,5 @@
 
 ## 更新
 
-[本书线上地址](https://fontend.gitbook.io/notes/)
+[本书线上地址](https://fe-note.gitbook.io/notes/)
 

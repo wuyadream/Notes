@@ -1,0 +1,684 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>常用算法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../browser/" />
+    
+    
+    <link rel="prev" href="datastruct.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../network/https.html">
+            
+                <a href="../network/https.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../network/tcp.html">
+            
+                <a href="../network/tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../network/websocket.html">
+            
+                <a href="../network/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../network/secure.html">
+            
+                <a href="../network/secure.html">
+            
+                    
+                    前端安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    计算机基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="datastruct.html">
+            
+                <a href="datastruct.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="algorithm.html">
+            
+                <a href="algorithm.html">
+            
+                    
+                    常用算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../browser/">
+            
+                <a href="../browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../browser/render.html">
+            
+                <a href="../browser/render.html">
+            
+                    
+                    浏览器渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../browser/cache.html">
+            
+                <a href="../browser/cache.html">
+            
+                    
+                    Web缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../js/">
+            
+                <a href="../js/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../js/js1.html">
+            
+                <a href="../js/js1.html">
+            
+                    
+                    JavaScript必知必会(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../js/js2.html">
+            
+                <a href="../js/js2.html">
+            
+                    
+                    JavaScript必知必会(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../js/js3.html">
+            
+                <a href="../js/js3.html">
+            
+                    
+                    JavaScript必知必会(三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../js/extend.html">
+            
+                <a href="../js/extend.html">
+            
+                    
+                    原型链与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../js/promise.html">
+            
+                <a href="../js/promise.html">
+            
+                    
+                    Promise原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../css/css1.html">
+            
+                <a href="../css/css1.html">
+            
+                    
+                    CSS知识点(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >常用算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5E38;&#x7528;&#x7B97;&#x6CD5;">&#x5E38;&#x7528;&#x7B97;&#x6CD5;</h1>
+<p>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x7B97;&#x6CD5;&#x662F;&#x7F16;&#x7A0B;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x51E0;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;</p>
+<h2 id="1&#x3001;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;">1&#x3001;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;</h2>
+<blockquote>
+<p>&#x6392;&#x5E8F;&#xFF1A;&#x5BF9;&#x4E00;&#x5E8F;&#x5217;&#x5BF9;&#x8C61;&#x6839;&#x636E;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x6392;&#x5E8F;&#x3002;</p>
+<p>&#x8BC4;&#x4EF7;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x7684;&#x4F18;&#x52A3;</p>
+</blockquote>
+<pre><code>&#x7A33;&#x5B9A;&#xFF1A;&#x5982;&#x679C;a&#x5728;b&#x524D;&#x9762;&#xFF0C;&#x800C;a=b&#xFF0C;&#x6392;&#x5E8F;&#x4E4B;&#x540E;a&#x4ECD;&#x7136;&#x5728;b&#x7684;&#x524D;&#x9762;&#x3002;
+&#x5185;&#x6392;&#x5E8F;&#xFF1A;&#x6240;&#x6709;&#x7684;&#x6392;&#x5E8F;&#x64CD;&#x4F5C;&#x90FD;&#x5728;&#x5185;&#x5B58;&#x5B8C;&#x6210;&#x3002;
+&#x5916;&#x6392;&#x5E8F;&#xFF1A;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x592A;&#x5927;&#xFF0C;&#x56E0;&#x6B64;&#x628A;&#x6570;&#x636E;&#x653E;&#x5728;&#x78C1;&#x76D8;&#xFF0C;&#x800C;&#x6392;&#x5E8F;&#x901A;&#x8FC7;&#x78C1;&#x76D8;&#x548C;&#x5185;&#x5B58;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x3002;
+&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x6240;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#x3002;
+&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x6240;&#x9700;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;&#x3002;
+</code></pre><blockquote>
+<p>&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x603B;&#x7ED3;</p>
+</blockquote>
+<p><img src="../image/&#x6392;&#x5E8F;&#x7B97;&#x6CD5;.jpg" alt="&#x6392;&#x5E8F;&#x7B97;&#x6CD5;"></p>
+<p>&#x540D;&#x8BCD;&#x89E3;&#x91CA;&#xFF1A;</p>
+<p>n:&#x6570;&#x636E;&#x89C4;&#x6A21;   k:&apos;&#x6876;&apos;&#x7684;&#x4E2A;&#x6570;  In-place:&#x5360;&#x7528;&#x5E38;&#x6570;&#x5185;&#x5B58;&#xFF0C;&#x4E0D;&#x5360;&#x7528;&#x989D;&#x5916;&#x5185;&#x5B58; Out-place:&#x5360;&#x7528;&#x989D;&#x5916;&#x5185;&#x5B58;</p>
+<h2 id="2&#x3001;&#x5192;&#x6CE1;&#x6392;&#x5E8F;">2&#x3001;&#x5192;&#x6CE1;&#x6392;&#x5E8F;</h2>
+<p>&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#x6BCF;&#x6B21;&#x6BD4;&#x8F83;&#x76F8;&#x90BB;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x6BD4;&#x7B2C;&#x4E8C;&#x4E2A;&#x5927;&#xFF0C;&#x5C31;&#x628A;&#x5B83;&#x4EEC;&#x4EA4;&#x6362;&#x3002;</p>
+<blockquote>
+<p>&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+<pre><code>        function bubbleSort(array) {
+            for(var i=0; i&lt;array.length; i++) {
+                for(var j=0; j&lt;array.length-1-i;j++) {
+                    if(array[j+1] &lt; array[j]) {
+                        var temp = array[j+1];
+                        array[j+1] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+        }
+</code></pre><blockquote>
+<p>&#x7B97;&#x6CD5;&#x5206;&#x6790;</p>
+</blockquote>
+<ul>
+<li>&#x6700;&#x4F73;&#x60C5;&#x51B5;&#xFF1A;T(n) = O(n)</li>
+<li>&#x6700;&#x5DEE;&#x60C5;&#x51B5;&#xFF1A; T(n) = O(n^2)</li>
+<li>&#x5E73;&#x5747;&#x60C5;&#x51B5;: T(n) = O(n^2)</li>
+</ul>
+<h2 id="3&#x3001;&#x9009;&#x62E9;&#x6392;&#x5E8F;">3&#x3001;&#x9009;&#x62E9;&#x6392;&#x5E8F;</h2>
+<p>&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x9996;&#x5148;&#x5728;&#x672A;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x627E;&#x5230;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#xFF0C;&#x5B58;&#x653E;&#x5230;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x7684;&#x5176;&#x5B9E;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#xFF0C;&#x518D;&#x4ECE;&#x5269;&#x4F59;&#x672B;&#x6392;&#x5E8F;&#x5143;&#x7D20;&#x4E2D;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x653E;&#x5230;&#x5DF2;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x7684;&#x672B;&#x5C3E;&#x3002;</p>
+<blockquote>
+<p>&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+<pre><code>        function selectSort(array) {
+            var index;
+            for(var i=0; i&lt;array.length-1; i++) {
+                index = i;
+                for(var j=i+1; j&lt;array.length; j++) {
+                    if(arr[j] &lt; arr[index]) {
+                        index = j;
+                    }
+                }
+                var temp = array[i];
+                array[i] = array[index];
+                array[index] = temp;
+            }
+        }
+</code></pre><blockquote>
+<p>&#x7B97;&#x6CD5;&#x5206;&#x6790;</p>
+</blockquote>
+<ul>
+<li>&#x6700;&#x4F73;&#x60C5;&#x51B5;&#x3001;&#x6700;&#x5DEE;&#x60C5;&#x51B5;&#x3001;&#x5E73;&#x5747;&#x60C5;&#x51B5;&#x5747;&#x4E3A;:T(n) = O(n^2)</li>
+</ul>
+<h2 id="4&#x3001;&#x63D2;&#x5165;&#x6392;&#x5E8F;">4&#x3001;&#x63D2;&#x5165;&#x6392;&#x5E8F;</h2>
+<p>&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x662F;&#x901A;&#x8FC7;&#x6784;&#x5EFA;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#xFF0C;&#x5BF9;&#x4E8E;&#x672A;&#x6392;&#x5E8F;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x5DF2;&#x6392;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x4ECE;&#x524D;&#x5411;&#x540E;&#x626B;&#x63CF;&#xFF0C;&#x627E;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x3002;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x5728;&#x5B9E;&#x73B0;&#x4E0A;&#xFF0C;&#x901A;&#x5E38;&#x91C7;&#x7528;in-place&#x6392;&#x5E8F;&#xFF0C;&#x5373;&#x9700;&#x8981;&#x7528;&#x5230;O(1)&#x7684;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x800C;&#x5728;&#x4ECE;&#x540E;&#x5411;&#x524D;&#x626B;&#x63CF;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x628A;&#x5DF2;&#x6392;&#x5E8F;&#x7684;&#x5143;&#x7D20;&#x9010;&#x6B65;&#x5411;&#x540E;&#x632A;&#x4F4D;&#xFF0C;&#x4E3A;&#x65B0;&#x5143;&#x7D20;&#x7684;&#x63D2;&#x5165;&#x63D0;&#x4F9B;&#x7A7A;&#x95F4;&#x3002;</p>
+<blockquote>
+<p>&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+<pre><code>        function insertSort(array) {
+            for(var i=1; i &lt; array.length; i++) {
+                var j = i-1, item = array[i];
+                while(j&gt;=0 &amp;&amp; array[j]&gt;item) {
+                    array[j+1] = array[j];
+                    j--;
+                }
+                array[j+1] = item;
+            }
+        }
+</code></pre><blockquote>
+<p>&#x7B97;&#x6CD5;&#x5206;&#x6790;</p>
+</blockquote>
+<ul>
+<li>&#x6700;&#x4F73;&#x60C5;&#x51B5;:T(n) = O(n)</li>
+<li>&#x6700;&#x6000;&#x60C5;&#x51B5;:T(n) = O(n^2)</li>
+<li>&#x5E73;&#x5747;&#x60C5;&#x51B5;: T(n) = O(n^2)</li>
+</ul>
+<h2 id="5&#x3001;&#x5FEB;&#x901F;&#x6392;&#x5E8F;">5&#x3001;&#x5FEB;&#x901F;&#x6392;&#x5E8F;</h2>
+<p>&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x8D9F;&#x6392;&#x5E8F;&#x5C06;&#x5F85;&#x6392;&#x5E8F;&#x8BB0;&#x5F55;&#x5206;&#x5272;&#x6210;&#x72EC;&#x7ACB;&#x7684;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#x8BB0;&#x5F55;&#x7684;&#x5173;&#x952E;&#x5B57;&#x6BD4;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x5173;&#x952E;&#x5B57;&#x5C0F;&#xFF0C;&#x5219;&#x53EF;&#x5206;&#x522B;&#x5BF9;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#x8BB0;&#x5F55;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5DF2;&#x8FBE;&#x5230;&#x6574;&#x4E2A;&#x5E8F;&#x5217;&#x6709;&#x5E8F;&#x3002;</p>
+<blockquote>
+<p>&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+<pre><code>        function quickSort(array, left, right) {
+            if(left &lt; right) {
+                var x=array[right], i=left-1,temp;
+                for(var j=left; j&lt;=right; j++) {
+                    if(array[j] &lt;= x) {
+                        i++;
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+                quickSort(array, left, i-1);
+                quickSort(array,i+1,right);
+            }
+
+        }
+</code></pre><blockquote>
+<p>&#x7B97;&#x6CD5;&#x5206;&#x6790;&#xFF1A;</p>
+<ul>
+<li>&#x6700;&#x4F73;&#x60C5;&#x51B5;: T(n) = O(nlogn)</li>
+<li>&#x6700;&#x574F;&#x60C5;&#x51B5;: T(n) = O(n^2)</li>
+<li>&#x5E73;&#x5747;&#x60C5;&#x51B5;: T(n) = O(nlogn)</li>
+</ul>
+</blockquote>
+<h2 id="6&#x3001;&#x5F52;&#x5E76;&#x6392;&#x5E8F;">6&#x3001;&#x5F52;&#x5E76;&#x6392;&#x5E8F;</h2>
+<p>&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x5F52;&#x5E76;&#x64CD;&#x4F5C;&#x4E0A;&#x7684;&#x4E00;&#x79CD;&#x6709;&#x6548;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x3002;&#x5C06;&#x5DF2;&#x6709;&#x5E8F;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x5408;&#x5E76;&#xFF0C;&#x5F97;&#x5230;&#x5B8C;&#x5168;&#x6709;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#x3002;</p>
+<blockquote>
+<p>&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;</p>
+</blockquote>
+<pre><code>        function mergeSort(array) {
+            var len = array.length;
+            if (len &lt; 2) {
+                return array;
+            }
+            var middle = Math.floor(len / 2);
+            var left = array.slice(0, middle);
+            var right = array.slice(middle);
+            return merge(mergeSort(left), mergeSort(right));
+        }
+        function merge(left, right) {
+            var result = [];
+            while (left.length &amp;&amp; right.length) {
+                if (left[0] &lt;= right[0]) {
+                    result.push(left.shift());
+                } else {
+                    result.push(right.shift());
+                }
+            }
+            while (left.lenghth &gt; 0) {
+                result.push(left.shift());
+            }
+            while (right.length &gt; 0) {
+                result.push(right.shift());
+            }
+            return result;
+        }
+</code></pre><blockquote>
+<p>&#x7B97;&#x6CD5;&#x5206;&#x6790;&#xFF1A;</p>
+<ul>
+<li>&#x6700;&#x4F73;&#x60C5;&#x51B5;: T(n) = O(n)</li>
+<li>&#x6700;&#x574F;&#x60C5;&#x51B5;: T(n) = O(nlogn)</li>
+<li>&#x5E73;&#x5747;&#x60C5;&#x51B5;: T(n) = O(nlogn)</li>
+</ul>
+</blockquote>
+<h2 id="7&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;">7&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<p><a href="https://juejin.im/post/57dcd394a22b9d00610c5ec8" target="_blank">&#x5341;&#x5927;&#x7ECF;&#x5178;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x603B;&#x7ED3;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="datastruct.html" class="navigation navigation-prev " aria-label="Previous page: 数据结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../browser/" class="navigation navigation-next " aria-label="Next page: 浏览器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"常用算法","level":"1.3.2","depth":2,"next":{"title":"浏览器","level":"1.4","depth":1,"path":"browser/README.md","ref":"browser/README.md","articles":[{"title":"浏览器渲染","level":"1.4.1","depth":2,"path":"browser/render.md","ref":"browser/render.md","articles":[]},{"title":"Web缓存","level":"1.4.2","depth":2,"path":"browser/cache.md","ref":"browser/cache.md","articles":[]}]},"previous":{"title":"数据结构","level":"1.3.1","depth":2,"path":"computer/datastruct.md","ref":"computer/datastruct.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"computer/algorithm.md","mtime":"2018-08-06T01:00:07.492Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-10T10:10:47.068Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
