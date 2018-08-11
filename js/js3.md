@@ -110,6 +110,34 @@ a = [b,b=a][0];
 ```
 上面的代码会先执行b=a,然后执行b=a。
 
-## 随机生成长度为n的字符串，字符串取值[a-z][0-9]
+## 随机生成长度为n的字符串，字符串取值[a-z][A-Z][0-9]
+
+常见字符对应的ASCII码：
+
+- 0-9 48-57
+- A-Z 65-90
+- a-z 97-122
+
+下面我们实现这个方法：
+
+```
+function getStr(n) {
+    function getChar() {
+        var n = Math.floor(Math.random()*62); // 向下取整
+        if(n < 10) {
+            return n; // 0-9       
+        } else if (n < 36) {
+            return String.fromCharCode(n+55); // A-Z
+        } else {
+            return String.fromCharCode(n+61); // a-z
+        }
+    }
+    var str = '';
+    for(var i=0; i<n; i++) {
+        str += getChar();
+    }
+    return str;
+}
+```
 
 ## 参考资料

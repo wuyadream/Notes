@@ -72,3 +72,28 @@ function exchange(str1, str2) {
     str1 = str1.b;
 }
 
+// 4.随机生成长度为n的字符串，字符串取值[0-9][a-z][A-Z]
+/*   ASCII码：  
+     0-9 48-57
+     A-Z 65-90
+     a-z 97-122 
+*/
+function getStr(n) {
+    function getChar() {
+        var n = Math.floor(Math.random()*62); // 向下取整
+        if(n < 10) {
+            return n; // 0-9       
+        } else if (n < 36) {
+            return String.fromCharCode(n+55); // A-Z
+        } else {
+            return String.fromCharCode(n+61); // a-z
+        }
+    }
+    var str = '';
+    for(var i=0; i<n; i++) {
+        str += getChar();
+    }
+    return str;
+}
+
+console.log(getStr(100));
