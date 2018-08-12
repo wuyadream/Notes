@@ -392,6 +392,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7" data-path="../frame/">
+            
+                <a href="../frame/">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../frame/vue.html">
+            
+                <a href="../frame/vue.html">
+            
+                    
+                    Vuejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -525,8 +557,32 @@ top3:k,&#x51FA;&#x73B0;&#x6B21;&#x6570;&#xFF1A;3
 </blockquote>
 <pre><code>a = [b,b=a][0];
 </code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x5148;&#x6267;&#x884C;b=a,&#x7136;&#x540E;&#x6267;&#x884C;b=a&#x3002;</p>
-<h2 id="&#x968F;&#x673A;&#x751F;&#x6210;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x53D6;&#x503C;a-z0-9">&#x968F;&#x673A;&#x751F;&#x6210;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x53D6;&#x503C;[a-z][0-9]</h2>
-<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<h2 id="&#x968F;&#x673A;&#x751F;&#x6210;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x53D6;&#x503C;a-za-z0-9">&#x968F;&#x673A;&#x751F;&#x6210;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x53D6;&#x503C;[a-z][A-Z][0-9]</h2>
+<p>&#x5E38;&#x89C1;&#x5B57;&#x7B26;&#x5BF9;&#x5E94;&#x7684;ASCII&#x7801;&#xFF1A;</p>
+<ul>
+<li>0-9 48-57</li>
+<li>A-Z 65-90</li>
+<li>a-z 97-122</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>function getStr(n) {
+    function getChar() {
+        var n = Math.floor(Math.random()*62); // &#x5411;&#x4E0B;&#x53D6;&#x6574;
+        if(n &lt; 10) {
+            return n; // 0-9       
+        } else if (n &lt; 36) {
+            return String.fromCharCode(n+55); // A-Z
+        } else {
+            return String.fromCharCode(n+61); // a-z
+        }
+    }
+    var str = &apos;&apos;;
+    for(var i=0; i&lt;n; i++) {
+        str += getChar();
+    }
+    return str;
+}
+</code></pre><h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
 
                                 
                                 </section>
@@ -570,7 +626,7 @@ top3:k,&#x51FA;&#x73B0;&#x6B21;&#x6570;&#xFF1A;3
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JavaScript必知必会(三)","level":"1.5.3","depth":2,"next":{"title":"原型链与继承","level":"1.5.4","depth":2,"path":"js/extend.md","ref":"js/extend.md","articles":[]},"previous":{"title":"JavaScript必知必会(二)","level":"1.5.2","depth":2,"path":"js/js2.md","ref":"js/js2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/js3.md","mtime":"2018-08-10T09:36:27.374Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-10T10:10:47.068Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JavaScript必知必会(三)","level":"1.5.3","depth":2,"next":{"title":"原型链与继承","level":"1.5.4","depth":2,"path":"js/extend.md","ref":"js/extend.md","articles":[]},"previous":{"title":"JavaScript必知必会(二)","level":"1.5.2","depth":2,"path":"js/js2.md","ref":"js/js2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/js3.md","mtime":"2018-08-10T10:44:38.486Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-12T13:56:25.541Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
