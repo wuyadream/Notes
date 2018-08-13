@@ -111,11 +111,59 @@
 
 4.堆叠上下文内部的子堆叠上下文的z-index只在父堆叠上下文中有意义。
 
-## 不定宽高元素垂直水平居中 
+## 不定宽高元素垂直水平居中
 
-## css实现一个占屏幕宽度50%的正方形 
+> 法一:position+transform
+
+```
+.wrap {
+    position: relative;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+```
+注意：此法一定要设置父元素为positioned定位（relative、absolute、fixed）。
+
+> 法二：flex
+
+```
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+}
+```
+
+## css实现一个占屏幕宽度50%的正方形
+
+这里我们利用margin-bottom属性的特殊性，当margin-bottom属性时百分数时，它会基于父元素的宽度计算下边距。那么，我们可以把margin-bottom设置为50%，也就是屏幕宽度的50%。
+
+```
+.square {
+    width: 50%;
+    height:0;
+    padding-bottom: 50%;
+    background: green;
+}
+```
+
+缩放浏览器窗口可以看到，一个绿色的正方形正好宽度正好为屏幕宽度的50%。
 
 ## HSL色彩模型是什么，在CSS中如何使用
+
+HSL模式是一个基于360色相环。
+第一个数字代表色相环角度，60度是黄色，120度是绿色，180度是青色，240度是蓝色，300度洋红色，360度红色。
+第二个数字代表饱和度，值为百分比。
+第二个数字代表亮度，值为百分比。
+
+```
+hsl(60,50%,90%)
+```
+![hsl](../image/hsl.png)
 
 ## 参考文献
 
