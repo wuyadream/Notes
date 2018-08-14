@@ -342,12 +342,51 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="promise.html">
+        <li class="chapter " data-level="1.5.5" data-path="ajax.html">
+            
+                <a href="ajax.html">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="promise.html">
             
                 <a href="promise.html">
             
                     
                     Promise原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="closure.html">
+            
+                <a href="closure.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    ES6
             
                 </a>
             
@@ -380,6 +419,19 @@
             
                     
                     CSS知识点(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../css/css2.html">
+            
+                <a href="../css/css2.html">
+            
+                    
+                    CSS知识点(二)
             
                 </a>
             
@@ -421,6 +473,109 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../package/">
+            
+                <a href="../package/">
+            
+                    
+                    打包工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../package/gulp.html">
+            
+                <a href="../package/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../package/webpack.html">
+            
+                <a href="../package/webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../test/interface.html">
+            
+                <a href="../test/interface.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../test/unit.html">
+            
+                <a href="../test/unit.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../mobile/">
+            
+                <a href="../mobile/">
+            
+                    
+                    移动端开发
+            
+                </a>
+            
+
             
         </li>
     
@@ -483,7 +638,7 @@
     }
 }
 </code></pre><h4 id="3&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;">3.&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</h4>
-<p>w3c&#x7684;&#x65B9;&#x6CD5;&#x662F;<code>e.preventDefault()</code>,IE&#x5219;&#x662F;&#x4F7F;&#x7528;<code>e.returnValue=false</code>&#x6765;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;&#x6240;&#x4EE5;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x7684;&#x517C;&#x5BB9;&#x5199;&#x6CD5;&#x662F;&#xFF1B;</p>
+<p>w3c&#x7684;&#x65B9;&#x6CD5;&#x662F;<code>event.preventDefault()</code>,IE&#x5219;&#x662F;&#x4F7F;&#x7528;<code>event.returnValue=false</code>&#x6765;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;&#x6240;&#x4EE5;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x7684;&#x517C;&#x5BB9;&#x5199;&#x6CD5;&#x662F;&#xFF1B;</p>
 <pre><code>function stopDefault(e) {
     if(e &amp;&amp; e.preventDefault) {
         e.preventDefault();
@@ -581,7 +736,7 @@ getFontSize = function(el) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JavaScript必知必会(二)","level":"1.5.2","depth":2,"next":{"title":"JavaScript必知必会(三)","level":"1.5.3","depth":2,"path":"js/js3.md","ref":"js/js3.md","articles":[]},"previous":{"title":"JavaScript必知必会(一)","level":"1.5.1","depth":2,"path":"js/js1.md","ref":"js/js1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/js2.md","mtime":"2018-08-10T10:12:41.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-12T13:56:25.541Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JavaScript必知必会(二)","level":"1.5.2","depth":2,"next":{"title":"JavaScript必知必会(三)","level":"1.5.3","depth":2,"path":"js/js3.md","ref":"js/js3.md","articles":[]},"previous":{"title":"JavaScript必知必会(一)","level":"1.5.1","depth":2,"path":"js/js1.md","ref":"js/js1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/js2.md","mtime":"2018-08-14T02:27:05.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-14T11:46:07.525Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

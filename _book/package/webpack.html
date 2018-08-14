@@ -1,0 +1,977 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>webpack · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../test/" />
+    
+    
+    <link rel="prev" href="gulp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../network/https.html">
+            
+                <a href="../network/https.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../network/tcp.html">
+            
+                <a href="../network/tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../network/websocket.html">
+            
+                <a href="../network/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../network/secure.html">
+            
+                <a href="../network/secure.html">
+            
+                    
+                    前端安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../computer/">
+            
+                <a href="../computer/">
+            
+                    
+                    计算机基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../computer/datastruct.html">
+            
+                <a href="../computer/datastruct.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../computer/algorithm.html">
+            
+                <a href="../computer/algorithm.html">
+            
+                    
+                    常用算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../browser/">
+            
+                <a href="../browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../browser/render.html">
+            
+                <a href="../browser/render.html">
+            
+                    
+                    浏览器渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../browser/cache.html">
+            
+                <a href="../browser/cache.html">
+            
+                    
+                    Web缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../js/">
+            
+                <a href="../js/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../js/js1.html">
+            
+                <a href="../js/js1.html">
+            
+                    
+                    JavaScript必知必会(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../js/js2.html">
+            
+                <a href="../js/js2.html">
+            
+                    
+                    JavaScript必知必会(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../js/js3.html">
+            
+                <a href="../js/js3.html">
+            
+                    
+                    JavaScript必知必会(三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../js/extend.html">
+            
+                <a href="../js/extend.html">
+            
+                    
+                    原型链与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../js/ajax.html">
+            
+                <a href="../js/ajax.html">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../js/promise.html">
+            
+                <a href="../js/promise.html">
+            
+                    
+                    Promise原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../js/closure.html">
+            
+                <a href="../js/closure.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../js/es6.html">
+            
+                <a href="../js/es6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../css/css1.html">
+            
+                <a href="../css/css1.html">
+            
+                    
+                    CSS知识点(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../css/css2.html">
+            
+                <a href="../css/css2.html">
+            
+                    
+                    CSS知识点(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../frame/">
+            
+                <a href="../frame/">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../frame/vue.html">
+            
+                <a href="../frame/vue.html">
+            
+                    
+                    Vuejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    打包工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="gulp.html">
+            
+                <a href="gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="webpack.html">
+            
+                <a href="webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../test/interface.html">
+            
+                <a href="../test/interface.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../test/unit.html">
+            
+                <a href="../test/unit.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../mobile/">
+            
+                <a href="../mobile/">
+            
+                    
+                    移动端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >webpack</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webpack">webpack</h1>
+<p>webpack&#x662F;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x6A21;&#x5757;&#x6253;&#x5305;&#x5668;&#x3002;&#x5F53;webpack&#x5904;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x9012;&#x5F52;&#x5730;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x56FE;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x7684;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;bundle&#x3002;</p>
+<h2 id="1&#x57FA;&#x672C;&#x6982;&#x5FF5;">1.&#x57FA;&#x672C;&#x6982;&#x5FF5;</h2>
+<p>&#x73B0;&#x5728;webpack&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x662F;4.x&#x4E86;&#xFF0C;&#x7ECF;&#x8FC7;&#x8FED;&#x4EE3;&#xFF0C;&#x73B0;&#x5728;webpack&#x662F;&#x9AD8;&#x5EA6;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x3002;&#x4F7F;&#x7528;webpack&#x4E4B;&#x524D;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x56DB;&#x4E2A;<strong>&#x6838;&#x5FC3;&#x6982;&#x5FF5;</strong>&#x3002;</p>
+<h4 id="1&#x5165;&#x53E3;entry">1.&#x5165;&#x53E3;[entry]</h4>
+<p><strong>&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x6307;&#x793A;webpack&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x6A21;&#x5757;&#x6765;&#x4F5C;&#x4E3A;&#x6784;&#x5EFA;&#x8D77;&#x5185;&#x90E8;&#x4F9D;&#x8D56;&#x56FE;&#x7684;&#x5F00;&#x59CB;&#x3002;</strong>&#x8FDB;&#x5165;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x540E;&#xFF0C;<code>webpack</code>&#x4F1A;&#x627E;&#x51FA;&#x6709;&#x54EA;&#x4E9B;&#x6A21;&#x5757;&#x548C;&#x5E93;&#x662F;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#xFF08;&#x76F4;&#x63A5;&#x548C;&#x95F4;&#x63A5;&#xFF09;&#x4F9D;&#x8D56;&#x7684;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x968F;&#x5373;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x6700;&#x540E;&#x8F93;&#x51FA;&#x5230;&#x79F0;&#x4E4B;&#x4E3A;<code>bundles</code>&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;<code>webpack</code>&#x914D;&#x7F6E;&#x4E2D;&#x914D;&#x7F6E;<code>entry</code>&#x5C5E;&#x6027;&#xFF0C;&#x6765;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#xFF08;&#x6216;&#x591A;&#x4E2A;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#xFF09;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>./src</code>&#x3002;</p>
+<p>&#x5355;&#x5165;&#x53E3;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre><code>const config = {
+    entry: &apos;./src/main.js&apos;
+};
+
+module.exports = config;
+</code></pre><p>&#x591A;&#x5165;&#x53E3;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre><code>const config = {
+    entry: {
+        pageOne: &apos;./src/pageOne/index.js&apos;,
+        pageTwo: &apos;./src/pageTwo/index.js&apos;,
+        pageThree: &apos;./src/pageThree/index.js&apos;
+    }
+};
+</code></pre><h4 id="2&#x51FA;&#x53E3;output">2.&#x51FA;&#x53E3;[output]</h4>
+<p><strong>output</strong>&#x5C5E;&#x6027;&#x544A;&#x8BC9;<code>webpack</code>&#x5728;&#x54EA;&#x91CC;&#x8F93;&#x51FA;&#x5B83;&#x6240;&#x521B;&#x5EFA;&#x7684;<code>bundles</code>&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x547D;&#x540D;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>./dist</code>&#x3002;&#x57FA;&#x672C;&#x4E0A;&#xFF0C;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#xFF0C;&#x90FD;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x5230;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5165;&#x53E3;&#x53EF;&#x80FD;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x4F46;&#x662F;&#x51FA;&#x53E3;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x5355;&#x4E2A;&#x5165;&#x53E3;&#xFF1A;</p>
+<pre><code>const config = {
+  output: {
+    filename: &apos;bundle.js&apos;,
+    path: &apos;/home/proj/public/assets&apos;
+  }
+};
+
+module.exports = config;
+</code></pre><p>&#x591A;&#x4E2A;&#x5165;&#x53E3;&#xFF1A;</p>
+<pre><code>const condig = {
+    entry: {
+        app: &apos;./src/app.js&apos;,
+        search: &apos;./src/search.js&apos;
+    },
+    output: {
+        filename: &apos;[name].js&apos;,
+        path: __dirname +  &apos;/dist&apos;
+    }
+};
+</code></pre><h4 id="3loader">3.loader</h4>
+<p><strong>loader</strong>&#x8BA9;<code>webpack</code>&#x80FD;&#x591F;&#x53BB;&#x5904;&#x7406;&#x90A3;&#x4E9B;&#x975E;<code>JavaScript</code>&#x6587;&#x4EF6;&#xFF08;<code>webpack</code>&#x81EA;&#x8EAB;&#x53EA;&#x7406;&#x89E3;<code>JavaScript</code>&#xFF09;&#x3002;<code>loader</code>&#x53EF;&#x4EE5;&#x5C06;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x4E3A;<code>webpack</code> &#x80FD;&#x591F;&#x5904;&#x7406;&#x7684;&#x6709;&#x6548;&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;<code>webpack</code>&#x7684;&#x6253;&#x5305;&#x80FD;&#x529B;&#xFF0C;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x672C;&#x8D28;&#x4E0A;&#xFF0C;<code>webpack loader</code>&#x5C06;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4F9D;&#x8D56;&#x56FE;&#xFF08;&#x548C;&#x6700;&#x7EC8;&#x7684;<code>bundle</code>&#xFF09;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x5728;&#x66F4;&#x9AD8;&#x5C42;&#x9762;&#xFF0C;&#x5728;<code>webpac</code> &#x7684;&#x914D;&#x7F6E;&#x4E2D;<code>loader</code>&#x6709;&#x4E24;&#x4E2A;&#x76EE;&#x6807;&#xFF1A;</p>
+<ol>
+<li><code>test</code>&#x5C5E;&#x6027;&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x51FA;&#x5E94;&#x8BE5;&#x88AB;&#x5BF9;&#x5E94;&#x7684; <code>loader</code> &#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x7684;&#x67D0;&#x4E2A;&#x6216;&#x67D0;&#x4E9B;&#x6587;&#x4EF6;&#x3002;</li>
+<li><code>use</code> &#x5C5E;&#x6027;&#xFF0C;&#x8868;&#x793A;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x54EA;&#x4E2A; <code>loader</code>&#x3002;</li>
+</ol>
+<p>&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;<code>loader</code>:</p>
+<blockquote>
+<p>1.&#x914D;&#x7F6E;:&#x5728;webpack.config.js&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;loader(&#x63A8;&#x8350;&#x7528;&#x6CD5;)</p>
+</blockquote>
+<pre><code>const config = {
+    module: {
+        rules: [
+            {test: /\.css$/, use: [
+                {loader: &apos;style-loader&apos;},
+                {loader: &apos;css-loader&apos;,
+                 options: {
+                     modules: true
+                 }}
+            ]}
+        ]
+    }
+}
+</code></pre><blockquote>
+<p>2.&#x5185;&#x8054; &#x5728;import&#x8BED;&#x53E5;&#x4E2D;&#x6307;&#x5B9A;loader</p>
+</blockquote>
+<p>&#x4F7F;&#x7528;<code>!</code>&#x5C06;&#x8D44;&#x6E90;&#x4E2D;&#x7684;<code>loader</code>&#x5206;&#x5F00;&#x3002;&#x5206;&#x5F00;&#x7684;&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x90FD;&#x76F8;&#x5BF9;&#x4E8E;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x89E3;&#x6790;&#x3002;&#x901A;&#x8FC7;<code>?</code>&#x6765;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x4E0B;&#x9762;&#x7684;<code>modules</code>&#x5C31;&#x662F;<code>css-loader</code>&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code>import Styles from &apos;style-loader!css-loader?modules!./styles.css&apos;;
+</code></pre><blockquote>
+<p>3.&#x901A;&#x8FC7;CLI&#x4F7F;&#x7528;loader</p>
+</blockquote>
+<pre><code>webpack --module-bind jade-loader --module-bind &apos;css-style-loader!css-loader&apos;
+</code></pre><p>&#x8FD9;&#x4F1A;&#x5BF9;<code>.jade</code>&#x6587;&#x4EF6;&#x4F7F;&#x7528;<code>jade-loader</code>&#xFF0C;&#x5BF9;<code>.css</code>&#x6587;&#x4EF6;&#x4F7F;&#x7528;<code>style-loader</code>&#x548C;<code>css-loader</code>&#x3002;</p>
+<h4 id="4&#x63D2;&#x4EF6;plugins">4.&#x63D2;&#x4EF6;[plugins]</h4>
+<p><code>loader</code>&#x88AB;&#x7528;&#x4E8E;&#x8F6C;&#x6362;&#x67D0;&#x4E9B;&#x7C7B;&#x578B;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x800C;&#x63D2;&#x4EF6;&#x5219;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x8303;&#x56F4;&#x66F4;&#x5E7F;&#x7684;&#x4EFB;&#x52A1;&#x3002;<strong>&#x63D2;&#x4EF6;&#x7684;&#x8303;&#x56F4;&#x5305;&#x62EC;&#xFF0C;&#x4ECE;&#x6253;&#x5305;&#x4F18;&#x5316;&#x548C;&#x538B;&#x7F29;&#xFF0C;&#x4E00;&#x76F4;&#x5230;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x63D2;&#x4EF6;&#x63A5;&#x53E3;&#x529F;&#x80FD;&#x6781;&#x5176;&#x5F3A;&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5904;&#x7406;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x4EFB;&#x52A1;&#x3002;</strong></p>
+<p>&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981; <code>require()</code> &#x5B83;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5B83;&#x6DFB;&#x52A0;&#x5230;<code>plugins</code>&#x6570;&#x7EC4;&#x4E2D;&#x3002;&#x591A;&#x6570;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x9009;&#x9879;(<code>option</code>)&#x81EA;&#x5B9A;&#x4E49;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x76EE;&#x7684;&#x800C;&#x591A;&#x6B21;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>new</code>&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>&#x914D;&#x7F6E;</p>
+<p>&#x7531;&#x4E8E;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x643A;&#x5E26;&#x53C2;&#x6570;/&#x9009;&#x9879;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x5728;<code>webpack</code>&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x5411;<code>plugins</code>&#x5C5E;&#x6027;&#x4F20;&#x5165;<code>new</code>&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre><code>const HtmlwebpackPlugin = require(&apos;html-webpack-plugin&apos;);
+const webpack = require(&apos;webpack&apos;);
+const path = require(&apos;path&apos;);
+
+const config = {
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
+        new HtmlwebpackPlugin({
+            template: &apos;./src/index.html&apos;
+        })
+    ]
+}
+
+module.exports = config;
+</code></pre><h4 id="5&#x6A21;&#x5F0F;">5.&#x6A21;&#x5F0F;</h4>
+<p>&#x901A;&#x8FC7;&#x9009;&#x62E9;<code>development</code> &#x6216; <code>production</code> &#x4E4B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF0C;&#x6765;&#x8BBE;&#x7F6E;<code>mode</code>&#x53C2;&#x6570;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x76F8;&#x5E94;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;<code>webpack</code>&#x5185;&#x7F6E;&#x7684;&#x4F18;&#x5316;&#x3002;</p>
+<pre><code>module.exports = {
+  mode: &apos;production&apos;
+};
+</code></pre><h2 id="2&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x914D;&#x7F6E;">2.&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x914D;&#x7F6E;</h2>
+<pre><code>var webpack = require(&apos;webpack&apos;);
+var ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;); // &#x5C06;&#x6587;&#x4EF6;&#x4ECE;js&#x4E2D;&#x5206;&#x79BB;
+var CommonChunkPlugin = webpack.optimize.CommonChunkPlugin; // &#x5C06;&#x516C;&#x5171;&#x6A21;&#x5757;&#x62BD;&#x79BB;&#x5408;&#x6210;&#x6587;&#x4EF6;
+var HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;); // &#x751F;&#x6210;&#x66FF;&#x6362;&#x54C8;&#x5E0C;&#x6587;&#x4EF6;&#x540D;&#x7684;HTML
+var OccurrenceOrderPlugin = webpack.optimize.OccurrenceOrderPlugin; // &#x4F18;&#x5316;&#x6A21;&#x5757;&#x7684;ID&#x5206;&#x914D;&#xFF0C;&#x7528;&#x7684;&#x591A;&#x7684;&#x6A21;&#x5757;ID&#x66F4;&#x5C0F;
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin; // &#x538B;&#x7F29;JS&#x4EE3;&#x7801;
+var cleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;); // &#x6E05;&#x9664;&#x6587;&#x4EF6;
+var path = require(&apos;path&apos;);
+
+const config = {
+    // &#x4E0A;&#x4E0B;&#x6587;
+    context: path.resolve(__dirname, &apos;src&apos;),
+    // &#x5165;&#x53E3;
+    entry: {
+        a: &apos;./a.js&apos;,
+        b: &apos;./b.js&apos;,
+        vendor: [&apos;./c.js&apos;, &apos;d.js&apos;]
+    },
+    // &#x51FA;&#x53E3;
+    output: {
+        path: path.resolve(__dirname, &apos;dist&apos;),
+        filename: &apos;[name]-[hash:16].js&apos;,
+        publicPath: &apos;https://cdn.example.com/xxx/&apos;,
+        sourceMapFilename: &apos;[file].map&apos;
+    },
+    devtool: &apos;#source-map&apos;,
+    devServer: {
+        contentBase: path.resolve(__dirname, &apos;dist&apos;),
+        inline: true,
+        hot: true,
+        host: &apos;0.0.0.0&apos;,
+        port: &apos;8884&apos;
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: &apos;babel-loader&apos;
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: &quot;style-loader&quot;,
+                    use: [{
+                        loader: &apos;css-loader&apos;,
+                        options: {
+                            modules: true
+                        }
+                    }, {
+                        loader: &apos;postcss-loader&apos;
+                    }]
+                })
+            },
+            {
+                test: /\.less$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: &quot;style-loader&quot;,
+                    use: [
+                        {
+                           loader: &apos;css-loader&apos;,
+                           options: {
+                              modules: true
+                            }
+                        }, {
+                            loader: &apos;postcss-loader&apos;
+                        }, {
+                            loader: &apos;less-loader&apos;
+                        }
+                ]
+                })
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: &apos;url-loader&apos;,
+                options: {
+                    limit: 1024,
+                }
+            },
+            {
+                test: /\.vue$/,
+                loader: &apos;vue-loader&apos;
+            },
+            {
+                test: /\.(woff|woff2|eot)$/,
+                loader: &apos;url-loader&apos;,
+                options: {
+                    limit: 10000,
+                    mintype: &apos;application/font-woff&apos;
+                }
+            },
+            {
+                test: /\.ttf$/,
+                loader: &apos;url-loader&apos;,
+                options: {
+                    limit: 10000,
+                    mintype: &apos;application/font-woff&apos;
+                }
+            },
+            {
+                test: /\.eot$/,
+                loader: &apos;file-loader&apos;
+            },
+            {
+                test: /\.svg$/,
+                loader: &apos;url-loader&apos;,
+                options: {
+                    limit: 10000,
+                    mintype: &apos;image/svg+xml&apos;
+                }
+            }
+
+        ]
+    },
+    plugins: [
+        // &#x516C;&#x5171;&#x6A21;&#x5757;
+        new CommonChunkPlugin({
+            name: &apos;commons&apos;,
+            filename: &apos;commons.js&apos;,
+            chunks: [&apos;a&apos;, &apos;b&apos;] // &#x53EA;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5165;&#x53E3;chunk
+        }),
+        // &#x6E05;&#x9664;&#x591A;&#x4F59;&#x6587;&#x4EF6;
+        new cleanWebpackPlugin(&apos;dist/*.*&apos;, {
+            root: __dirname,
+            verbose: true, // &#x6253;&#x5370;&#x65E5;&#x5FD7;
+            dry: false
+        }),
+        // &#x8BBE;&#x7F6E;&#x62BD;&#x79BB;&#x51FA;&#x7684;css&#x6587;&#x4EF6;&#x540D;
+        new ExtractTextPlugin({
+            filename: &apos;css/[name].[contenthash].css&apos;,
+            allChunks: true,
+            disable: false,
+            allChunks: true
+        }),
+        // &#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x53D8;&#x91CF;
+        new webpack.definePlugin({
+            __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || &apos;false&apos;)),
+            __PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || &apos;false&apos;))
+        }),
+        // &#x751F;&#x6210;HTML&#x6587;&#x4EF6;&#xFF0C;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;set&#x8FDB;&#x53BB;
+        new HtmlWebpackPlugin({
+            filename: &apos;index.html&apos;,
+            template: &apos;src/index.html&apos;,
+            inject: true
+        }),
+        // &#x70ED;&#x52A0;&#x8F7D;&#x7EC4;&#x4EF6;
+        new webpack.HotModuleReplacementPlugin(),
+        // &#x4F18;&#x5316;&#x6A21;&#x5757;ID&#x5206;&#x914D;
+        new OccurrenceOrderPlugin(),
+        // &#x538B;&#x7F29;js
+        new UglifyJsPlugin(),
+    ],
+    // &#x5B9A;&#x4E49;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x5305;&#x7684;&#x4F9D;&#x8D56;
+    externals: {
+        jquery: &apos;jQuery&apos;,
+        react: &apos;react&apos;
+    }
+};
+
+module.exports = config;
+</code></pre><h2 id="3&#x53C2;&#x8003;&#x6587;&#x732E;">3.&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<p><a href="https://www.webpackjs.com/concepts/" target="_blank">webpack&#x4E2D;&#x6587;&#x6587;&#x6863;</a></p>
+<p><a href="https://toutiao.io/posts/fiq8wd/preview" target="_blank">Webpack &#x5E38;&#x7528;&#x914D;&#x7F6E;&#x603B;&#x7ED3;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gulp.html" class="navigation navigation-prev " aria-label="Previous page: gulp">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../test/" class="navigation navigation-next " aria-label="Next page: 测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"webpack","level":"1.8.2","depth":2,"next":{"title":"测试","level":"1.9","depth":1,"path":"test/README.md","ref":"test/README.md","articles":[{"title":"接口测试","level":"1.9.1","depth":2,"path":"test/interface.md","ref":"test/interface.md","articles":[]},{"title":"单元测试","level":"1.9.2","depth":2,"path":"test/unit.md","ref":"test/unit.md","articles":[]}]},"previous":{"title":"gulp","level":"1.8.1","depth":2,"path":"package/gulp.md","ref":"package/gulp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"package/webpack.md","mtime":"2018-08-14T09:33:35.244Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-14T11:46:07.525Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

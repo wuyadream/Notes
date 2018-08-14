@@ -22,7 +22,7 @@ function stopBubble(e) {
 
 #### 3.阻止默认行为
 
-w3c的方法是`e.preventDefault()`,IE则是使用`e.returnValue=false`来阻止默认行为。所以阻止默认行为的兼容写法是；
+w3c的方法是`event.preventDefault()`,IE则是使用`event.returnValue=false`来阻止默认行为。所以阻止默认行为的兼容写法是；
 
 ```
 function stopDefault(e) {

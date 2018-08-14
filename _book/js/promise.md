@@ -267,7 +267,7 @@ function get(url) {
         xhr.onreadystatechange = function() {
             if(this.readyState === 4) {
                 if(this.status === 200) {
-                    resolve(this.resopnseText, this);
+                    resolve(this.responseText, this);
                 } else {
                     let reason = {
                         code: this.status,
