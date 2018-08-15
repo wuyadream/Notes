@@ -17,6 +17,7 @@
     * [JavaScript必知必会(一)](js/js1.md)
     * [JavaScript必知必会(二)](js/js2.md)
     * [JavaScript必知必会(三)](js/js3.md)
+    * [JavaScript必知必会(四)](js/js4.md)
     * [原型链与继承](js/extend.md)
     * [Ajax](js/ajax.md)
     * [Promise原理及实现](js/promise.md)
@@ -34,4 +35,7 @@
     * [接口测试](test/interface.md)
     * [单元测试](test/unit.md)
 * [移动端开发](mobile/README.md)
+    * [移动端开发技巧](mobile/skill.md)
+* [nodejs](nodejs/README.md)
+    * [express](nodejs/express.md)
 
