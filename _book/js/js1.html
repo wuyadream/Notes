@@ -1,0 +1,961 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JavaScript必知必会(一) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="js2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../network/https.html">
+            
+                <a href="../network/https.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../network/tcp.html">
+            
+                <a href="../network/tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../network/websocket.html">
+            
+                <a href="../network/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../network/secure.html">
+            
+                <a href="../network/secure.html">
+            
+                    
+                    前端安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../computer/">
+            
+                <a href="../computer/">
+            
+                    
+                    计算机基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../computer/datastruct.html">
+            
+                <a href="../computer/datastruct.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../computer/algorithm.html">
+            
+                <a href="../computer/algorithm.html">
+            
+                    
+                    常用算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../browser/">
+            
+                <a href="../browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../browser/render.html">
+            
+                <a href="../browser/render.html">
+            
+                    
+                    浏览器渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../browser/cache.html">
+            
+                <a href="../browser/cache.html">
+            
+                    
+                    Web缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="js1.html">
+            
+                <a href="js1.html">
+            
+                    
+                    JavaScript必知必会(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="js2.html">
+            
+                <a href="js2.html">
+            
+                    
+                    JavaScript必知必会(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="js3.html">
+            
+                <a href="js3.html">
+            
+                    
+                    JavaScript必知必会(三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="js4.html">
+            
+                <a href="js4.html">
+            
+                    
+                    JavaScript必知必会(四)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="extend.html">
+            
+                <a href="extend.html">
+            
+                    
+                    原型链与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="ajax.html">
+            
+                <a href="ajax.html">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="promise.html">
+            
+                <a href="promise.html">
+            
+                    
+                    Promise原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="closure.html">
+            
+                <a href="closure.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../css/css1.html">
+            
+                <a href="../css/css1.html">
+            
+                    
+                    CSS知识点(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../css/css2.html">
+            
+                <a href="../css/css2.html">
+            
+                    
+                    CSS知识点(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../css/animation.html">
+            
+                <a href="../css/animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../frame/">
+            
+                <a href="../frame/">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../frame/vue.html">
+            
+                <a href="../frame/vue.html">
+            
+                    
+                    Vuejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../package/">
+            
+                <a href="../package/">
+            
+                    
+                    打包工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../package/gulp.html">
+            
+                <a href="../package/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../package/webpack.html">
+            
+                <a href="../package/webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../test/interface.html">
+            
+                <a href="../test/interface.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../test/unit.html">
+            
+                <a href="../test/unit.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../mobile/">
+            
+                <a href="../mobile/">
+            
+                    
+                    移动端开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../mobile/skill.html">
+            
+                <a href="../mobile/skill.html">
+            
+                    
+                    移动端开发技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../nodejs/">
+            
+                <a href="../nodejs/">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../nodejs/express.html">
+            
+                <a href="../nodejs/express.html">
+            
+                    
+                    express
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >JavaScript必知必会(一)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="javascript&#x5FC5;&#x77E5;&#x5FC5;&#x4F1A;&#x4E00;">JavaScript&#x5FC5;&#x77E5;&#x5FC5;&#x4F1A;(&#x4E00;)</h1>
+<h2 id="1&#x539F;&#x751F;js&#x5B9E;&#x73B0;&#x8DEF;&#x7531;">1.&#x539F;&#x751F;js&#x5B9E;&#x73B0;&#x8DEF;&#x7531;</h2>
+<p>&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF0C;&#x662F;&#x6307;&#x968F;&#x7740;&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x680F;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x5C55;&#x793A;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x9875;&#x9762;&#x4E5F;&#x4E0D;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x4F20;&#x7EDF;&#x7684;&#x7F51;&#x9875;&#x6839;&#x636E;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x7684;&#x4E0D;&#x540C;&#x5730;&#x5740;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5C55;&#x793A;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x8FD9;&#x6837;&#x9020;&#x6210;&#x670D;&#x52A1;&#x5668;&#x538B;&#x529B;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x800C;&#x4E14;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;&#x4E5F;&#x4F1A;&#x6BD4;&#x8F83;&#x6162;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x51FA;&#x73B0;&#x4E86;&#x3002;</p>
+<p>&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x7F51;&#x5740;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x9875;&#x9762;&#x4E5F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x3002;&#x5730;&#x5740;&#x680F;&#x5185;&#x5BB9;&#x6539;&#x53D8;&#x663E;&#x793A;&#x4E0D;&#x540C;&#x9875;&#x9762;&#x7531;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x8BFB;&#x53D6;<code>location.hash</code>&#x548C;&#x76D1;&#x542C;<code>hashchange</code>&#x4E8B;&#x4EF6;&#x6765;&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Router&#x5BF9;&#x8C61;:</p>
+<pre><code>function Router() {
+    this.currentUrl = &apos;&apos;;
+    this.routes = {};
+}
+
+Router.prototype.route = function (path, callback) {
+    this.routes[path] = callback || function () {};
+}
+
+Router.prototype.refresh = function () {
+    this.currentUrl = location.hash.slice(1) || &apos;/&apos;;
+    this.routes[this.currentUrl]();
+}
+
+Router.prototype.init = function () {
+    window.addEventListener(&apos;load&apos;, this.refresh.bind(this), false);
+    window.addEventListener(&apos;hashchange&apos;, this.refresh.bind(this), false);
+}
+</code></pre><p>&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>var route = new Router();
+route.init();
+route.route(&apos;/&apos;, changeContent.bind(null, &apos;/&apos;));
+route.route(&apos;/route1&apos;, changeContent.bind(null, &apos;/route1&apos;));
+route.route(&apos;/route2&apos;, changeContent.bind(null, &apos;/route2&apos;));
+
+function changeContent(text) {
+    var el = document.getElementById(&apos;hash&apos;);
+    el.innerHTML = text;
+}
+</code></pre><p>&#x5BF9;&#x5E94;&#x7684;html&#x4E3A;&#xFF1A;</p>
+<pre><code>        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;/&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#/route1&quot;&gt;/route1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#/route2&quot;&gt;/route2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h4&gt;&#x8DEF;&#x7531;&#x662F;&#xFF1A;&lt;/h4&gt;
+        &lt;h4 id=&quot;hash&quot;&gt;&lt;/h4&gt;
+</code></pre><p>&#x4E0A;&#x9762;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x4E0D;&#x540C;&#x8DEF;&#x7531;&#x5C55;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x652F;&#x6301;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x524D;&#x8FDB;&#x548C;&#x540E;&#x9000;&#xFF0C;&#x5F88;&#x597D;&#x5730;&#x89E3;&#x51B3;&#x4E86;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="2&#x539F;&#x751F;js&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x76D1;&#x542C;&#x5668;">2.&#x539F;&#x751F;js&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x76D1;&#x542C;&#x5668;</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>defineProperty</code>&#x6765;&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x76D1;&#x542C;&#x3002;<code>defineProperty</code>&#x662F;ES5&#x5C5E;&#x6027;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x90FD;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x3002;&#x73B0;&#x5728;&#x9996;&#x5148;&#x6765;&#x770B;&#x770B;&#x5B83;&#x7684;&#x7528;&#x6CD5;&#xFF1A;</p>
+<pre><code>Object.defineProperty(obj, prop, descriptor)
+</code></pre><p>&#x5404;&#x53C2;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<p><code>obj</code>&#x662F;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x7684;&#x90A3;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><code>prop</code>&#x662F;&#x9700;&#x8981;&#x88AB;&#x5B9A;&#x4E49;&#x6216;&#x8005;&#x4FEE;&#x6539;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x3002;</p>
+<p><code>descriptor</code>&#x662F;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;<code>prop</code>&#x7684;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x6765;&#x8BE6;&#x7EC6;&#x770B;&#x770B;<code>descriptor</code>&#x7684;&#x5404;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x505A;&#x4EC0;&#x4E48;&#x3002;</p>
+<blockquote>
+<p>value &#x8BBE;&#x7F6E;&#x5C5E;&#x6027;&#x7684;&#x503C;</p>
+</blockquote>
+<pre><code>var bob = {};
+Object.defineProperty(bob, &apos;name&apos;, {
+    value: &apos;bob&apos;
+});
+
+console.log(bob.name); // bob
+bob.name = &apos;Bob&apos;;
+console.log(bob.name); // &#x4F9D;&#x65E7;&#x662F;bob
+</code></pre><p>&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;bob&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;name&#xFF0C;value&#x4E3A;bob&#x3002;&#x7136;&#x540E;&#x8BD5;&#x7740;&#x7ED9;name&#x5C5E;&#x6027;&#x8D4B;&#x503C;Bob&#xFF0C;&#x5374;&#x53D1;&#x73B0;&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;&#x539F;&#x6765;&#x53EA;&#x6709;&#x628A;<code>writable</code>&#x4FEE;&#x9970;&#x7B26;&#x8BBE;&#x7F6E;&#x4E3A;<code>true</code>&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x624D;&#x80FD;&#x88AB;&#x4FEE;&#x6539;&#x3002;</p>
+<blockquote>
+<p>writable &#x5F53;&#x8BE5;&#x5C5E;&#x6027;&#x4E3A;true&#x65F6;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x624D;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x6539;&#x53D8;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;false&#x3002;</p>
+</blockquote>
+<pre><code>var bob = {};
+Object.defineProperty(bob, &apos;name&apos;, {
+    value: &apos;bob&apos;,
+    writable: true
+});
+
+console.log(bob.name); // bob
+bob.name = &apos;Bob&apos;;
+console.log(bob.name); // Bob
+</code></pre><p>&#x4F9D;&#x7136;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8FD9;&#x6B21;&#x6210;&#x529F;&#x4FEE;&#x6539;&#x4E86;bob&#x7684;name&#x5C5E;&#x6027;&#x3002;</p>
+<blockquote>
+<p>enumerable &#x8BBE;&#x7F6E;&#x8BE5;&#x5C5E;&#x6027;&#x662F;&#x5426;&#x662F;&#x53EF;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;false&#x3002;</p>
+</blockquote>
+<p>&#x53EA;&#x6709;<code>enumerable</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;<code>true</code>&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x624D;&#x53EF;&#x4EE5;&#x7528;<code>for(prop in obj)</code>&#x548C;<code>Object.keys()</code>&#x679A;&#x4E3E;&#x51FA;&#x6765;&#x3002;</p>
+<pre><code>Object.defineProperty(bob, &apos;age&apos;, {
+    value: 18,
+    enumerable: true
+});
+
+Object.defineProperty(bob, &apos;math&apos;, {
+    value: 98,
+    enumerable: false
+});
+
+for(prop in bob) {
+    console.log(prop); // age
+}
+
+console.log(Object.keys(bob)); // [age]
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3A;bob&#x6DFB;&#x52A0;&#x4E86;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;age&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x4E0D;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;math&#x3002;</p>
+<blockquote>
+<p>configurable &#x8BE5;&#x5C5E;&#x6027;&#x51B3;&#x5B9A;&#x4E86;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x4EE5;&#x53CA;&#x9664;writable&#x5916;&#x7684;&#x5176;&#x4ED6;&#x7279;&#x6027;&#x80FD;&#x4E0D;&#x80FD;&#x88AB;&#x4FEE;&#x6539;&#xFF1B;&#x5E76;&#x4E14;&#x4FEE;&#x6539;writable&#x65F6;&#x53EA;&#x80FD;&#x4FEE;&#x6539;&#x4E3A;false&#x3002;</p>
+</blockquote>
+<pre><code>Object.defineProperty(bob, &apos;English&apos;, {
+    value: 80,
+    configurable: false
+})
+
+Object.defineProperty(bob, &apos;English&apos;, { // &#x62A5;&#x9519;
+    writable: true
+});
+
+Object.defineProperty(bob, &apos;English&apos;, { // &#x4E0D;&#x62A5;&#x9519;
+    writable: false
+});
+
+delete bob.English; // &#x5C5E;&#x6027;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x5220;&#x9664;
+
+console.log(bob.English); // 80
+</code></pre><blockquote>
+<p>get &#x7ED9;&#x5C5E;&#x6027;&#x63D0;&#x4F9B;&#x7684;getter&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;getter&#x5219;&#x8FD4;&#x56DE;undefined&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x503C;&#x88AB;&#x7528;&#x4F5C;&#x5C5E;&#x6027;&#x503C;&#x3002;</p>
+<p>set &#x7ED9;&#x5C5E;&#x6027;&#x63D0;&#x4F9B;&#x7684;setter&#x65B9;&#x6CD5;,&#x8BE5;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x552F;&#x4E00;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x65B0;&#x503C;&#x5206;&#x914D;&#x7ED9;&#x8BE5;&#x5C5E;&#x6027;&#x3002;</p>
+</blockquote>
+<p><code>get</code>&#x548C;<code>set</code>&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x548C;<code>value</code>&#x548C;<code>writable</code>&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x51FA;&#x73B0;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<pre><code>bob.weight = &apos;45kg&apos;;
+var weight = bob.weight;
+
+Object.defineProperty(bob, &apos;weight&apos;, {
+    enumerable: true,
+    get: function () { 
+        console.log(&apos;&#x8BFB;&#x53D6;&#x4F53;&#x91CD;&#x5566;&apos;);
+        return weight;
+     },
+    set: function (newValue) {
+        console.log(&apos;&#x76D1;&#x542C;&#x4E2D;...&#x4F53;&#x91CD;&#x6539;&#x53D8;&#x5566;&apos;);
+        console.log(&apos;set: &apos;+newValue);
+        weight = newValue;
+    }
+});
+
+console.log(bob.weight); // &#x8BFB;&#x53D6;&#x4F53;&#x91CD;&#x5566; 45kg
+bob.weight = &apos;50kg&apos;;
+console.log(bob.weight); // &#x76D1;&#x542C;&#x4E2D;...&#x4F53;&#x91CD;&#x6539;&#x53D8;&#x5566; set: 50kg
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;bob&#x7684;<code>weight</code>&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x4E86;<code>set</code>&#x548C;<code>get</code>&#x65B9;&#x6CD5;&#xFF0C;&#x73B0;&#x5728;&#x8BFB;&#x53D6;&#x548C;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x65F6;&#x90FD;&#x4F1A;&#x6253;&#x5370;&#x51FA;&#x63D0;&#x793A;&#x6587;&#x5B57;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x53D8;&#x91CF;<code>weight</code>&#x6765;&#x4FDD;&#x5B58;<code>weight</code>&#x5C5E;&#x6027;&#x503C;&#x3002;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5728;<code>get</code>&#x6216;<code>set</code>&#x65B9;&#x6CD5;&#x91CC;&#x8BBF;&#x95EE;<code>bob.weight</code>&#xFF0C;&#x5219;&#x53C8;&#x4F1A;&#x89E6;&#x53D1;<code>wegiht</code>&#x7684;<code>get</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x9677;&#x5165;&#x6B7B;&#x5FAA;&#x73AF;&#x4E2D;&#x3002;</p>
+<p>&#x4ECB;&#x7ECD;&#x5B8C;<code>defineProperty</code>&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x76D1;&#x542C;&#x5668;&#x7684;&#x5199;&#x6CD5;&#x5C31;&#x547C;&#x4E4B;&#x6B32;&#x51FA;&#x5566;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x91CD;&#x5199;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;set&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x8C03;&#x7528;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x76D1;&#x542C;&#x3002;</p>
+<pre><code>// &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x76D1;&#x542C;&#x5668;
+function addPropertyListener(obj, prop, callback) {
+    if(obj.hasOwnProperty(prop)) {
+        var  value = obj[prop];
+        Object.defineProperty(obj, prop, {
+            enumerable: true,
+            get: function () {
+                return value;
+            },
+            set: function (newValue) {
+                value = newValue;
+                callback &amp;&amp; callback(newValue);
+            }
+        })
+    }
+    return false;
+}
+
+// &#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x7684;&#x76D1;&#x542C;&#x5668;
+bob.height = &apos;182cm&apos;;
+
+addPropertyListener(bob, &apos;height&apos;, function(value) {
+    console.log(&apos;&#x8BBE;&#x7F6E;&#x8EAB;&#x9AD8;&#xFF1A;&apos;+value);
+    console.log(&apos;bob.height=&apos;+bob.height);
+});
+
+bob.height = &apos;160cm&apos;; // &#x8BBE;&#x7F6E;&#x8EAB;&#x9AD8;&#xFF1A;160cm  bob.height=160cm
+</code></pre><p>&#x6211;&#x4EEC;&#x7684;&#x76D1;&#x542C;&#x5668;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x597D;&#x4E86;&#xFF0C;&#x5176;&#x5B9E;&#xFF0C;<code>defineProperty</code>&#x975E;&#x5E38;&#x5F3A;&#x5927;&#xFF0C;vuejs&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x4E5F;&#x662F;&#x57FA;&#x4E8E;&#x8BE5;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<h2 id="3&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;">3&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<p><a href="https://juejin.im/entry/5887833d8d6d81006cf781b4" target="_blank">&#x539F;&#x751F; js &#x5B9E;&#x73B0;&#x524D;&#x7AEF;&#x8DEF;&#x7531;</a></p>
+<p><a href="https://segmentfault.com/a/1190000006178220" target="_blank">&#x7406;&#x89E3;JavaScript&#x7684;Object.defineProperty()&#x51FD;&#x6570;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: JavaScript">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="js2.html" class="navigation navigation-next " aria-label="Next page: JavaScript必知必会(二)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaScript必知必会(一)","level":"1.5.1","depth":2,"next":{"title":"JavaScript必知必会(二)","level":"1.5.2","depth":2,"path":"js/js2.md","ref":"js/js2.md","articles":[]},"previous":{"title":"JavaScript","level":"1.5","depth":1,"path":"js/README.md","ref":"js/README.md","articles":[{"title":"JavaScript必知必会(一)","level":"1.5.1","depth":2,"path":"js/js1.md","ref":"js/js1.md","articles":[]},{"title":"JavaScript必知必会(二)","level":"1.5.2","depth":2,"path":"js/js2.md","ref":"js/js2.md","articles":[]},{"title":"JavaScript必知必会(三)","level":"1.5.3","depth":2,"path":"js/js3.md","ref":"js/js3.md","articles":[]},{"title":"JavaScript必知必会(四)","level":"1.5.4","depth":2,"path":"js/js4.md","ref":"js/js4.md","articles":[]},{"title":"原型链与继承","level":"1.5.5","depth":2,"path":"js/extend.md","ref":"js/extend.md","articles":[]},{"title":"Ajax","level":"1.5.6","depth":2,"path":"js/ajax.md","ref":"js/ajax.md","articles":[]},{"title":"Promise原理及实现","level":"1.5.7","depth":2,"path":"js/promise.md","ref":"js/promise.md","articles":[]},{"title":"闭包","level":"1.5.8","depth":2,"path":"js/closure.md","ref":"js/closure.md","articles":[]},{"title":"ES6","level":"1.5.9","depth":2,"path":"js/es6.md","ref":"js/es6.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/js1.md","mtime":"2018-08-07T09:37:10.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-16T11:35:12.469Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

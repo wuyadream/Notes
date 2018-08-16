@@ -26,6 +26,7 @@
 * [CSS](css/README.md)
     * [CSS知识点(一)](css/css1.md)
     * [CSS知识点(二)](css/css2.md)
+    * [动画](css/animation.md)
 * [框架](frame/README.md)
     * [Vuejs](frame/vue.md)
 * [打包工具](package/README.md)
