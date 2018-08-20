@@ -70,14 +70,16 @@ vuejs则是采用数据劫持结合发布-订阅的方式来实现双向绑定�
 Vuejs数据绑定的具体步骤：
 
 1、实现Observer
-将需要观察的数据对象进行递归遍历，包括子属性对象的属性，都通过defineProperty劫持属性的setter和getter。实现一个消息订阅器，维护一个订阅者的数组，数据变动触发notify，再调用订阅者的update方法。
+将需要观察的数据对象进行递归遍历，包括子属性对象的属性，都通过`defineProperty`劫持属性的`setter`和`getter`方法。实现一个消息订阅器，维护一个订阅者的数组，数据变动触发`notify`，再调用订阅者的`update()`方法。
+
 2、实现Complie
 complie解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图。
+
 3、实现Watcher
-Watcher订阅者是Observer和Compile之间通信的桥梁。它主要的工作是将指令绑定的数据添加订阅，接收属性变化的通知，调用update()方法，触发Compile()绑定的回调。
+Watcher订阅者是`Observer`和`Compile`之间通信的桥梁。它主要的工作是将指令绑定的数据添加订阅，接收属性变化的通知，调用`update()`方法，触发`Compile()`绑定的回调，实现视图更新。
 
 4、实现MVVM
-MVVM作为数据绑定的入口，整合Observer、Complie和Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析模板指令，最终利用Watcher搭起Obersver和Complile的桥梁。
+MVVM作为数据绑定的入口，整合`Observer`、`Complie`和`Watcher`三者，通过`Observer`来监听自己的`model`数据变化，通过`Compile`来解析模板指令，最终利用`Watcher`搭起`Obersve`r和`Complile`的桥梁。
 
 ## virtual DOM
 

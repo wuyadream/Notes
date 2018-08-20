@@ -175,6 +175,30 @@ n:数据规模   k:'桶'的个数  In-place:占用常数内存，不占用额外
 - 最坏情况: T(n) = O(nlogn)
 - 平均情况: T(n) = O(nlogn)
 
-## 7、参考文献
+## 7、二分查找
+
+function binarySearch(target, arr) {
+    var start = 0;
+    var end = arr.length-1;
+    
+    while(start < end) {
+        var mid = parset((start+end)/2);
+        if(arr[mid] === target) {
+            return mid;
+        } else if(target < arr[mid]) {
+            end = mid-1;
+        } else {
+            start = mid+1;
+        }
+    }
+
+    return -1;
+}
+
+> 算法分析：
+
+- 时间复杂度为: T(n) = O(nlog)
+
+## 8、参考文献
 
 [十大经典排序算法总结](https://juejin.im/post/57dcd394a22b9d00610c5ec8)

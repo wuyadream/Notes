@@ -45,13 +45,20 @@ const config = {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: [{
+                    use: [
+                        {
                         loader: 'css-loader',
                         options: {
                             modules: true
                         }
-                    }, {
-                        loader: 'postcss-loader'
+                        }, 
+                        {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                require('autoprefixer')()
+                            ]
+                        }
                     }]
                 })
             },
@@ -66,7 +73,12 @@ const config = {
                               modules: true
                             }
                         }, {
-                            loader: 'postcss-loader'
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: [
+                                    require('autoprefixer')()
+                                ]
+                            }
                         }, {
                             loader: 'less-loader'
                         }
@@ -132,8 +144,7 @@ const config = {
         new ExtractTextPlugin({
             filename: 'css/[name].[contenthash].css',
             allChunks: true,
-            disable: false,
-            allChunks: true
+            disable: false
         }),
         // 定义全局变量
         new webpack.definePlugin({

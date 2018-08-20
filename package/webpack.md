@@ -287,8 +287,7 @@ const config = {
         new ExtractTextPlugin({
             filename: 'css/[name].[contenthash].css',
             allChunks: true,
-            disable: false,
-            allChunks: true
+            disable: false
         }),
         // 定义全局变量
         new webpack.definePlugin({

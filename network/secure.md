@@ -30,20 +30,20 @@ XSS(Cross Site Script, 跨站脚本攻击)，是攻击者在Web页面中插入�
 
 - HttpOnly Cookie。Web应用程序在设置cookie时，将其属性设置为HttpOnly，就可以避免该网页cookie被客户端恶意盗取，保护用户cookie信息。
 
-- 设置`NTTP Header: "X-XSS-Protection:1"`
+- 设置`HTTP Header: "X-XSS-Protection:1"`。
 
 
 ## 2、CSRF
 
 CSRF(Cross Site Request Forgery，跨站请求伪造)，冒充用户在站内进行操作请求，达到攻击的目的。
 
-举个例子。网站A是一家银行的网站，一个转账接口是"bankA.com/transfer?toID=?&cash=?"。该接口只有在已验证身份的情况下才能调用。此时，攻击者建立了一个B网站，里面放了一段隐藏代码，用来调用转账接口。当受害者登录A网站后，短时间不需要验证，这个是花花又访问了B网站，B里面隐藏的恶意代码就会执行成功。
+举个例子。网站A是一家银行的网站，一个转账接口是"bankA.com/transfer?toID=?&cash=?"。该接口只有在已验证身份的情况下才能调用。此时，攻击者建立了一个B网站，里面放了一段隐藏代码，用来调用转账接口。当受害者登录A网站后，短时间不需要验证，在这个时间段内又访问了B网站，B里面隐藏的恶意代码就会执行成功。
 
 > 预防方式：
 
 - 关键操作只接受post请求。
 
-- 检测Referer值，判断请求来源是否可信。
+- 检测Referrer值，判断请求来源是否可信。
 
 - 使用Token来验证身份，这是目前的主流用法。服务器维护一个有生命周期的Token用以验证用户的身份。token的产生必须要随机、使用也是一次性的并且注意保密。
 
