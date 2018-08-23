@@ -72,6 +72,34 @@
     transform: skew(45deg, 45deg);
 }
 
+/* 两列布局 */
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: red;
+}
+
+.content {
+    position: absolute;
+    left: 200px;
+    right: 0;
+    top: 0;
+    background: green;
+    height: 100%;
+}
+
+.left{
+    float: left;
+    width: 100px;
+    margin-right: 20px;   /*形成20px的间隔*/
+}
+.right{
+    overflow: hidden;    /*通过设置overflow: hidden来触发BFC特性*/
+}
+
 
 
 

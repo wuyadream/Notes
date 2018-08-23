@@ -130,6 +130,10 @@ Nuxt.js 支持SSR的Vuejs通用应用框架。
 
 template首先会被编译成抽象语法树、经过generate得到render函数，render的返回值是VNod。
 
+## vuex
+
+....
+
 ## 参考资料
 
 [你应该要知道的Vue.js](https://github.com/Alvin-Liu/Blog/issues/13)

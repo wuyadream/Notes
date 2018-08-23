@@ -177,6 +177,7 @@ n:数据规模   k:'桶'的个数  In-place:占用常数内存，不占用额外
 
 ## 7、二分查找
 
+```
 function binarySearch(target, arr) {
     var start = 0;
     var end = arr.length-1;
@@ -194,6 +195,7 @@ function binarySearch(target, arr) {
 
     return -1;
 }
+```
 
 > 算法分析：
 

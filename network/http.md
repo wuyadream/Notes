@@ -4,7 +4,7 @@ HTTP（HyperText Transfer Protocol，超文本传输协议）是建立在应用�
 ## 1、HTTP的特征
 
 - 采用客户端/服务器的模式
-
+ 
 - HTTP最初的设计目的是提供一种发布和接受HTML页面的方法，所以HTTP是**无连接无状态**的协议。
 
 - HTTP对传输的数据类型没有限制，使用灵活。
@@ -52,7 +52,7 @@ HTTP采用B/S模式，客户端发出请求，服务器响应请求。
 > 请求信息
 
 ```
-POST / HTTP/1.1
+ POST / HTTP/1.1
  Host: www.example.com
  User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.6)
  Gecko/20050225 Firefox/1.0.1
@@ -217,6 +217,7 @@ HTTP条件GET时HTTP协议为了减少不必要的带宽浪费，提出的一种
 |no-cache|告诉（代理）服务器不直接使用缓存，要求向原服务器发起请求|
 |no-store|所有内容不会被保存到缓存或Internet临时文件中|
 |only-if-cached|希望获取缓存内容，不用向原服务器去请求|
+|max-age|缓存有效期，单位是秒|
 
 作为响应首部时，常用的值是；
 
@@ -267,7 +268,6 @@ Cache-Control的值可以自由组合可选值，但是也有些限制，比如n
 3.经过HTTPS安全加密的请求。也有人测试发现，IE在头部加入Cache-Control:max-age信息，firefox在头部加入Cache-Control:Public之后，能够对HTTPS的资源进行缓存。
 4.POST请求无法缓存。
 5.HTTP响应头不包含Last-Modified/Etag，也不包含Cache-Control/Expires请求无法被缓存。
-
 ```
 
 ## 9、HTTP/1.0、HTTP/1.1与HTTP/2.0

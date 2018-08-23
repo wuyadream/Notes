@@ -137,6 +137,11 @@ function Pub() {
 	}
 }
 
+```
+
+测试如下：
+
+```
 var pub1 = new Pub();
 
 var sale = function(event) {
@@ -160,6 +165,35 @@ pub1.unsubscribe('sale', sale);
 pub1.public('裙子', {
     price: 199
 });
+```
+
+## 使用apply实现bind方法
+
+> call(thisObj, [arg1, [arg2, [arg3...]]])
+
+call 方法可将一个函数的对象上下文从初始的上下文改变为由`thisObj`指定的新对象。第一个参数是替换的调用对象，后面的参数是调用函数的参数，以逗号分隔。返回的替换后的函数运行结果。
+
+> apply(thisObj, [, argArray])
+
+用指定的thisObj对象替换函数的运行上下文。第一个参数同call一样，第二个参数argArray为一个传参数组。返回的是替换上下文后函数运行的结果。
+
+> bind(thisObj, [arg1, [arg2, [arg3...]])
+
+用指定对象替换当前对象，应用某一对象的一个方法。 说明：bind的thisObj参数也和call方法一样，thisObj如果未传，那么 Global 对象被用作 thisObj。arg1 … argN可传可不传。如果不传，可以在调用的时候再传。如果传了，调用的时候则可以不传，调用的时候如果你还是传了，则不生效。返回的是替换上下文后的函数。
+
+> 使用apply实现bind
+
+```
+Function.prototype.bind = function(context) {
+    // 保存上下文
+    var self = this;
+    // 保存参数
+    var arg = [].slice.call(arguments, 1);
+    return function() {
+        // 将两次传入参数合并，调用self函数
+        return self.apply(context, arg.concat([].slice.call(arguments)));
+    }
+}
 ```
 
 ## 参考资料
