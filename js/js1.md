@@ -64,7 +64,9 @@ function changeContent(text) {
 
 上面就实现了不同路由展示不同的内容。支持浏览器的前进和后退，很好地解决了前后端分离的问题。
 
-> 法二：history api
+> 法二：history.pushState()+popstate
+
+跟之前的方法一样,`pushState()`修改url的地址，`popstate`监听地址的改变，不同的是，手动的进行`pushState()`并不会触发`popstate`事件。
 
 ## 2.原生js实现对象属性监听器
 
@@ -225,7 +227,7 @@ bob.height = '160cm'; // 设置身高：160cm  bob.height=160cm
 
 ## 3、参考文献
 
-[原生 js 实现前端路由](https://juejin.im/entry/5887833d8d6d81006cf781b4)
+[原生js实现前端路由](https://juejin.im/entry/5887833d8d6d81006cf781b4)
 
 [理解JavaScript的Object.defineProperty()函数](https://segmentfault.com/a/1190000006178220)
 

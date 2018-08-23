@@ -8,7 +8,7 @@
 |--|--|--|
 |IE|Trident|-ms-|
 |Firefox|Gecko|-moz-|
-|Chrome|WebKit|-webkit-|
+|Chrome|WebKit->Blink|-webkit-|
 |Safari|WebKit|-webkit-|
 |Opera|Presto|-o-|
 

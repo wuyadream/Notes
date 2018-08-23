@@ -44,6 +44,10 @@ value：规定头的值
 resopnseText：获得字符串形式的响应数据
 resopnseXML：获得XML形式的响应数据
 
+## abort()
+
+终止请求。
+
 ## onreadystatechange事件
 
 当请求发送到服务器时，我们可以通过以下属性来监控请求状态的变化：

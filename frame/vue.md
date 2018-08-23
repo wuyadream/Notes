@@ -128,11 +128,28 @@ Nuxt.js 支持SSR的Vuejs通用应用框架。
 
 ## 对Vue.js的template编译的理解
 
-template首先会被编译成抽象语法树、经过generate得到render函数，render的返回值是VNod。
+template首先会被编译成抽象语法树、经过generate得到render函数，render的返回值是VNode。
 
 ## vuex
 
-....
+`Vuex`是一个专为`Vue.js`应用程序开发的**状态管理模式**。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+
+`Vuex`也集成到`Vue`的官方调试工具`devtools extension`，提供了诸如零配置的`time-travel`调试、状态快照导入导出等高级调试功能。
+
+当我们应用需要**多个组件共享状态**时，单向数据流的简洁性很容易被破坏，通过传参的方式来通信会非常地繁琐。Vuex把共享状态提取出来集中管理，形成一颗状态树。
+
+## Vue I18n的原理
+
+在Vue组件上注册i18n实例，使用指令绑定的形式动态更新。
+
+## Vue Router的原理
+
+1.hash+hashchange事件
+2.pushState()+popstate事件
+
+todo..
+
+[vue-router原理剖析](https://juejin.im/post/5b08c9ccf265da0dd527d98d)
 
 ## 参考资料
 
