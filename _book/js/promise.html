@@ -1,0 +1,1162 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Promise原理及实现 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="closure.html" />
+    
+    
+    <link rel="prev" href="ajax.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../network/https.html">
+            
+                <a href="../network/https.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../network/tcp.html">
+            
+                <a href="../network/tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../network/websocket.html">
+            
+                <a href="../network/websocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../network/secure.html">
+            
+                <a href="../network/secure.html">
+            
+                    
+                    前端安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../network/cors.html">
+            
+                <a href="../network/cors.html">
+            
+                    
+                    跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../computer/">
+            
+                <a href="../computer/">
+            
+                    
+                    计算机基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../computer/datastruct.html">
+            
+                <a href="../computer/datastruct.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../computer/algorithm.html">
+            
+                <a href="../computer/algorithm.html">
+            
+                    
+                    常用算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../browser/">
+            
+                <a href="../browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../browser/render.html">
+            
+                <a href="../browser/render.html">
+            
+                    
+                    浏览器渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../browser/cache.html">
+            
+                <a href="../browser/cache.html">
+            
+                    
+                    Web缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="js1.html">
+            
+                <a href="js1.html">
+            
+                    
+                    JavaScript必知必会(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="js2.html">
+            
+                <a href="js2.html">
+            
+                    
+                    JavaScript必知必会(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="js3.html">
+            
+                <a href="js3.html">
+            
+                    
+                    JavaScript必知必会(三)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="js4.html">
+            
+                <a href="js4.html">
+            
+                    
+                    JavaScript必知必会(四)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="js5.html">
+            
+                <a href="js5.html">
+            
+                    
+                    JavaScript必知必会(五)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="extend.html">
+            
+                <a href="extend.html">
+            
+                    
+                    原型链与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="ajax.html">
+            
+                <a href="ajax.html">
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.8" data-path="promise.html">
+            
+                <a href="promise.html">
+            
+                    
+                    Promise原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="closure.html">
+            
+                <a href="closure.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="reg.html">
+            
+                <a href="reg.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="throttle.html">
+            
+                <a href="throttle.html">
+            
+                    
+                    函数节流和防抖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="history.html">
+            
+                <a href="history.html">
+            
+                    
+                    History Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../css/css1.html">
+            
+                <a href="../css/css1.html">
+            
+                    
+                    CSS知识点(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../css/css2.html">
+            
+                <a href="../css/css2.html">
+            
+                    
+                    CSS知识点(二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../css/animation.html">
+            
+                <a href="../css/animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../css/bfc.html">
+            
+                <a href="../css/bfc.html">
+            
+                    
+                    BFC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../frame/">
+            
+                <a href="../frame/">
+            
+                    
+                    框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../frame/vue.html">
+            
+                <a href="../frame/vue.html">
+            
+                    
+                    Vuejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../package/">
+            
+                <a href="../package/">
+            
+                    
+                    打包工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../package/gulp.html">
+            
+                <a href="../package/gulp.html">
+            
+                    
+                    gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../package/webpack.html">
+            
+                <a href="../package/webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../test/interface.html">
+            
+                <a href="../test/interface.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../test/unit.html">
+            
+                <a href="../test/unit.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../mobile/">
+            
+                <a href="../mobile/">
+            
+                    
+                    移动端开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../mobile/skill.html">
+            
+                <a href="../mobile/skill.html">
+            
+                    
+                    移动端开发技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../nodejs/">
+            
+                <a href="../nodejs/">
+            
+                    
+                    nodejs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../nodejs/express.html">
+            
+                <a href="../nodejs/express.html">
+            
+                    
+                    express
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Promise原理及实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="promise&#x539F;&#x7406;&#x53CA;&#x5B9E;&#x73B0;">Promise&#x539F;&#x7406;&#x53CA;&#x5B9E;&#x73B0;</h1>
+<blockquote>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;<code>promise</code>&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x627F;&#x8BFA;&#xFF0C;&#x627F;&#x8BFA;&#x672C;&#x8EAB;&#x4F1A;&#x505A;&#x51FA;&#x6B63;&#x786E;&#x5EF6;&#x65F6;&#x6216;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x3002;&#x627F;&#x8BFA;&#x4F1A;&#x89E3;&#x51B3;<code>callback</code>&#x5904;&#x7406;&#x5F02;&#x6B65;&#x56DE;&#x8C03;&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x7684;&#x8C03;&#x7528;&#x8FC7;&#x65E9;&#xFF0C;&#x8FC7;&#x665A;&#x6216;&#x8C03;&#x7528;&#x6B21;&#x6570;&#x8FC7;&#x591A;&#x8FC7;&#x5C11;&#x3001;&#x541E;&#x6389;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;&#x6216;&#x5F02;&#x5E38;&#x95EE;&#x9898;&#x7B49;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x627F;&#x8BFA;&#x53EA;&#x63A5;&#x53D7;&#x9996;&#x6B21;<code>resolve()</code>&#x6216;<code>reject()</code>&#x51B3;&#x8BAE;&#xFF0C;&#x627F;&#x8BFA;&#x672C;&#x7701;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x6539;&#x53D8;&#xFF0C;&#x627F;&#x8BFA;&#x6240;&#x6709;&#x901A;&#x8FC7;<code>then()</code>&#x6CE8;&#x518C;&#x7684;&#x56DE;&#x8C03;&#x603B;&#x662F;&#x4E00;&#x6B21;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#xFF0C;&#x627F;&#x8BFA;&#x6240;&#x6709;&#x5F02;&#x5E38;&#x603B;&#x4F1A;&#x88AB;&#x6355;&#x83B7;&#x629B;&#x51FA;&#x3002;</p>
+</blockquote>
+<p><strong>&#x4E25;&#x8C28;&#x5730;&#x8BB2;&#xFF0C;<code>promise</code>&#x662F;&#x4E00;&#x79CD;&#x5C01;&#x88C5;&#x548C;&#x7EC4;&#x5408;&#x672A;&#x6765;&#x503C;&#x5F97;&#x6613;&#x4E8E;&#x590D;&#x7528;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5B9E;&#x73B0;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;&#x3001;&#x5F02;&#x6B65;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x3001;&#x5F02;&#x5E38;&#x5192;&#x6CE1;&#x3001;&#x4E32;&#x884C;|&#x5E76;&#x884C;&#x63A7;&#x5236;&#x7B49;&#x3002;</strong></p>
+<h2 id="1promise&#x72B6;&#x6001;">1.Promise&#x72B6;&#x6001;</h2>
+<p><code>promise</code>&#x7684;&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x4E3A;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x72B6;&#x6001;&#x4E4B;&#x4E00;&#xFF1A;&#x7B49;&#x5F85;&#x6001;(<code>pengding</code>)&#x3001;&#x6267;&#x884C;&#x6001;(<code>resolved</code>)&#x548C;&#x62D2;&#x7EDD;&#x6001;(<code>rejected</code>)&#x3002;&#x7B49;&#x5F85;&#x6001;&#x53EF;&#x4EE5;&#x5411;&#x6267;&#x884C;&#x6001;&#x6216;&#x62D2;&#x7EDD;&#x6001;&#x8FC1;&#x79FB;&#xFF0C;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#x5C06;&#x4E00;&#x76F4;&#x7EF4;&#x6301;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x3002;</p>
+<h2 id="2promise&#x6784;&#x9020;&#x51FD;&#x6570;">2.Promise&#x6784;&#x9020;&#x51FD;&#x6570;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x770B;<code>promise</code>&#x6784;&#x9020;&#x51FD;&#x6570;&#x9700;&#x8981;&#x505A;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>1.&#x521D;&#x59CB;&#x5316;<code>Promise</code>&#x72B6;&#x6001;&#x4E3A;<code>pending</code>&#x3002;
+2.&#x521D;&#x59CB;&#x5316;<code>then()</code>&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6570;&#x7EC4;(<code>then()</code>&#x65B9;&#x6CD5;&#x53EF;&#x88AB;&#x540C;&#x4E00;&#x4E2A;<code>promise</code>&#x8C03;&#x7528;&#x591A;&#x6B21;)
+3.&#x7ACB;&#x5373;&#x6267;&#x884C;&#x4F20;&#x5165;&#x7684;<code>fn</code>&#x51FD;&#x6570;&#xFF0C;&#x4F20;&#x5165;<code>Promise</code>&#x5185;&#x90E8;<code>resolve</code>&#x3001;<code>reject</code>&#x51FD;&#x6570;&#x3002;</p>
+<pre><code>function Promise(fn) {
+    // &#x521D;&#x59CB;&#x5316;promise&#x72B6;&#x6001;
+    // 0-pengding
+    // 1-resolved
+    // 2-rejected
+    this._state = 0;
+    // promise&#x6267;&#x884C;&#x7ED3;&#x679C;
+    this._value = null;
+
+    // &#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x6570;&#x7EC4;
+    this.deferreds = [];
+
+    // &#x7ACB;&#x5373;&#x6267;&#x884C;fn&#x51FD;&#x6570;
+    try {
+        fn(value =&gt; {
+            resolve(this, value);
+        }, reason =&gt; {
+            reject(this, reason);
+        })
+    } catch(err) {
+        reject(this, err);
+    }
+}
+</code></pre><h2 id="3then&#x51FD;&#x6570;">3.then&#x51FD;&#x6570;</h2>
+<p><code>then</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x540C;&#x4E00;&#x4E2A;<code>promise</code>&#x8C03;&#x7528;&#x591A;&#x6B21;&#xFF0C;&#x6BCF;&#x6B21;&#x8FD4;&#x56DE;&#x65B0;<code>promise</code>&#x5BF9;&#x8C61;&#x3002;<code>then</code>&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<code>onResolved</code>&#x3001;<code>onRejected</code>&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x3002;&#x5728;<code>promise</code>&#x88AB;<code>resolve</code>&#x6216;<code>reject</code>&#x540E;&#xFF0C;&#x6240;&#x6709;<code>onResolved</code>&#x6216;<code>onRejected</code>&#x51FD;&#x6570;&#x987B;&#x6309;&#x7167;&#x5176;&#x6CE8;&#x518C;&#x987A;&#x5E8F;&#x4F9D;&#x6B21;&#x56DE;&#x8C03;&#xFF0C;&#x4E14;&#x8C03;&#x7528;&#x6B21;&#x6570;&#x4E0D;&#x8D85;&#x8FC7;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;<code>then</code>&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x5927;&#x81F4;&#x4E3A;&#xFF1A;</p>
+<p>1.&#x5B9E;&#x4F8B;&#x5316;&#x7A7A;<code>promise</code>&#x5BF9;&#x8C61;&#x7528;&#x6765;&#x8FD4;&#x56DE;&#xFF0C;&#x7528;&#x4EE5;&#x4FDD;&#x6301;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x3002;
+2.&#x6784;&#x9020;<code>then()</code>&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4F53;&#x3002;
+3.&#x5224;&#x65AD;&#x5F53;&#x524D;<code>promise</code>&#x72B6;&#x6001;&#xFF0C;<code>pending</code>&#x72B6;&#x6001;&#x5B58;&#x50A8;&#x5EF6;&#x8FDF;&#x5904;&#x7406;&#x5BF9;&#x8C61;<code>deferred</code>&#xFF0C;&#x975E;<code>pending</code>&#x72B6;&#x6001;&#x6267;&#x884C;<code>onResolved</code>&#x6216;<code>onRejected</code>&#x56DE;&#x8C03;&#x3002;</p>
+<pre><code>Promise.prototype.then = function(onResolved, onRejected) {
+    // &#x521D;&#x59CB;&#x5316;&#x7A7A;promise&#x5BF9;&#x8C61;&#x7528;&#x6765;&#x8FD4;&#x56DE;
+    var res = new Promise(function(){});
+
+    // &#x4F7F;&#x7528; onResolved&#xFF0C;onRejected&#x5B9E;&#x4F8B;&#x5316;&#x5904;&#x7406;&#x5BF9;&#x8C61;Handler
+    var deferred = new Handler(onResolved, onRejected, res);
+
+    // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x4E3A;pengding&#xFF0C;&#x5B58;&#x50A8;&#x5EF6;&#x8FDF;&#x5904;&#x7406;&#x7684;&#x5BF9;&#x8C61;
+    if(this._state === 0) {
+        this._deferreds.push(deferred);
+        return res;
+    }
+
+    // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x4E0D;&#x662F;pengding,&#x8C03;&#x7528;handleResolved&#x6267;&#x884C;onResolved&#x6216;onRejected&#x56DE;&#x8C03;
+    handleResolved(this, deferred);
+
+    // &#x8FD4;&#x56DE;&#x65B0;promise&#x5BF9;&#x8C61;&#xFF0C;&#x7EF4;&#x6301;&#x94FE;&#x5F0F;&#x8C03;&#x7528;
+    return res;
+}
+
+// /handler&#x51FD;&#x6570;&#x5C01;&#x88C5;&#x5B58;&#x50A8;onResolved&#x3001;onRejected&#x51FD;&#x6570;&#x548C;&#x65B0;&#x751F;&#x6210;&#x7684;promise&#x5BF9;&#x8C61;
+function Handler(onResolved, onRejected, promise) {
+    this.onResolved = typeof onResolved === &apos;function&apos; ? onResolved : null;
+    this.onRejected = typeof onRejected === &apos;function&apos; ? onRejected : null;
+    this.promise = promise;
+}
+</code></pre><blockquote>
+<p>&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD4;&#x56DE;&#x65B0;&#x7684;<code>promise</code>&#x5BF9;&#x8C61;&#xFF1F;</p>
+</blockquote>
+<p>&#x56E0;&#x4E3A;&#x5F53;&#x524D;&#x7684;<code>promise</code>&#x5BF9;&#x8C61;&#x7684;&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x8F6C;&#x79FB;&#xFF0C;&#x65E0;&#x6CD5;&#x518D;&#x6539;&#x53D8;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x540E;&#x9762;&#x7684;&#x56DE;&#x8C03;&#x3002;</p>
+<h2 id="4resolve&#x51FD;&#x6570;">4.resolve&#x51FD;&#x6570;</h2>
+<p><code>promise</code>&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x4F20;&#x5165;&#x7684;<code>fn</code>&#x51FD;&#x6570;&#xFF0C;&#x540C;&#x65F6;&#x4F20;&#x9012;&#x5185;&#x90E8;<code>resolve</code>&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x7528;&#x6765;&#x6539;&#x53D8;<code>promise</code>&#x72B6;&#x6001;&#x3002;<code>resolve</code>&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x903B;&#x8F91;&#x5927;&#x6982;&#x4E3A;&#xFF1A;&#x5224;&#x65AD;&#x5E76;&#x6539;&#x53D8;&#x5F53;&#x524D;<code>promise</code>&#x72B6;&#x6001;&#xFF0C;&#x5B58;&#x50A8;<code>resolve()</code>&#x7684;<code>value</code>&#x503C;&#x3002;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x662F;&#x5426;&#x5B58;&#x5728;<code>then()</code>&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x82E5;&#x5B58;&#x5728;&#x5219;&#x4F9D;&#x6B21;&#x5F02;&#x6B65;&#x6267;&#x884C;<code>onResolved</code>&#x56DE;&#x8C03;&#x3002;</p>
+<p>&#x4E3A;&#x4F7F;<code>Promise</code>&#x7684;&#x5B9E;&#x73B0;&#x66F4;&#x5177;&#x6709;&#x901A;&#x7528;&#x6027;&#xFF0C;&#x5F53;<code>value</code>&#x4E3A;&#x5B58;&#x5728;<code>then()</code>&#x65B9;&#x6CD5;&#x7684;<code>thenable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x9700;&#x8981;&#x505A;<code>Promise Resolution Procedure</code>&#x5904;&#x7406;&#xFF0C;&#x89C4;&#x8303;&#x63CF;&#x8FF0;&#x4E3A;
+<code>[[Resolve]](promise, x)</code>,<code>x</code>&#x5373;&#x4E3A;&#x540E;&#x9762;<code>value</code>&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x5982;&#x4E0B;:</p>
+<ul>
+<li><p>&#x5982;&#x679C;<code>promis</code>e&#x548C;<code>x</code>&#x6307;&#x5411;&#x540C;&#x4E00;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;<code>TypeError</code>&#x4E3A;&#x636E;&#x62D2;&#x7EDD;&#x6267;&#x884C;<code>promise</code>&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;<code>x</code>&#x4E3A;<code>promise</code>&#xFF0C;&#x5219;&#x4F7F;<code>promise</code>&#x63A5;&#x53D7;<code>x</code>&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;<code>x</code>&#x4E3A;&#x5BF9;&#x8C61;&#x6216;&#x51FD;&#x6570;&#xFF1A;</p>
+</li>
+</ul>
+<p>1.&#x628A;<code>x.then</code>&#x8D4B;&#x503C;&#x7ED9;<code>then</code>&#x3002;
+2.&#x5982;&#x679C;&#x53D6;<code>x.then</code>&#x7684;&#x503C;&#x65F6;&#x629B;&#x51FA;&#x9519;&#x8BEF;e&#xFF0C;&#x5219;&#x4EE5;e&#x4E3A;&#x636E;&#x62D2;&#x7EDD;<code>promise</code>&#x3002;
+3.&#x5982;&#x679C;<code>then</code>&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x5C06;<code>x</code>&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x57DF;<code>this</code>&#x8C03;&#x7528;&#x4E4B;&#x3002;
+4.&#x5982;&#x679C;<code>x</code>&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x51FD;&#x6570;&#xFF0C;&#x4EE5;<code>x</code>&#x4E3A;&#x53C2;&#x6570;&#x6267;&#x884C;<code>promise</code>&#x3002;</p>
+<pre><code>function resolve(promise, value) {
+    // &#x975E;pengding&#x72B6;&#x6001;&#x4E0D;&#x53EF;&#x8F6C;&#x79FB;&#x72B6;&#x6001;
+    if(promise._state !== 0) return;
+
+    // promise&#x548C;value&#x6307;&#x5411;&#x540C;&#x4E00;&#x5BF9;&#x8C61;
+    if(value === promise) {
+        return reject(promise, new TypeError(&apos;A promise cannot be resolveed with itself.&apos;));
+    }
+
+    // &#x5982;&#x679C;value&#x4E3A;Promise,&#x5219;&#x4F7F;promise&#x63A5;&#x53D7;value&#x7684;&#x72B6;&#x6001;
+    if(value &amp;&amp; value instanceOf Promise &amp;&amp; value.then === promise.then) {
+        var deferreds = promise._deferreds;
+        if(value._state === 0) {
+            // value&#x662F;pending&#x72B6;&#x6001;&#xFF0C;&#x5C06;promise._deferreds&#x4F20;&#x9012;&#x7ED9;value._deferreds
+            value._deferreds.push(...deferreds);
+        } else if(deferreds.length !== 0) {
+            // value&#x4E3A;&#x975E;pending&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;value&#x4F5C;&#x4E3A;&#x5F53;&#x524D;&#x7684;promise&#xFF0C;&#x6267;&#x884C;then&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x5904;&#x7406;
+            for(var i=0; i&lt;deferreds.length; i++) {
+                handleResolved(value, deferreds[i]);
+            }
+            // &#x6E05;&#x7A7A;then&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x6570;&#x7EC4;
+            value._deferreds = [];
+        }
+        return;
+    }
+
+    // value&#x662F;&#x5BF9;&#x8C61;&#x6216;&#x51FD;&#x6570;,&#x5F53;value&#x662F;&#x5177;&#x6709;then&#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x8C03;&#x7528;then
+    if(value &amp;&amp;(typeof value === &apos;object&apos; || typeof value === &apos;function&apos;)) {
+        try {
+            var then = value.then;
+        } catch(err) {
+            return reject(promise, err);
+        }
+
+        // &#x5982;&#x679C;then&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x5C06;value&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x57DF;this&#x8C03;&#x7528;&#x4E4B;
+        if(typeof then === &apos;function&apos;) {
+            try {
+                then.call(value,function(value) {
+                    resolve(promise, value);
+                }, function(reason) {
+                    reject(promise, reason);
+                })
+            } catch(err) {
+                reject(promise, err);
+            }
+            return;
+        }
+    }
+
+    // &#x6539;&#x53D8;promise&#x5185;&#x90E8;&#x7684;&#x72B6;&#x6001;&#x4E3A;resolved
+    promise._state = 1;
+    promise._value = value;
+
+    // promise&#x5B58;&#x5728;then&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+    if(promise._deferreds.length != 0) {
+        for(var i=0; i&lt;promise._deferreds.length; i++) {
+            handleResolved(promise, promise._deferreds[i]);
+        }
+        // &#x6E05;&#x7A7A;then&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x51FD;&#x6570;
+        promise._deferreds = [];
+    }
+}
+</code></pre><p><code>resolve</code>&#x51FD;&#x6570;&#x903B;&#x8F91;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x96C6;&#x4E2D;&#x5904;&#x7406;<code>value</code>&#x503C;&#x7684;&#x591A;&#x79CD;&#x53EF;&#x80FD;&#x3002;&#x5982;&#x679C;<code>value</code>&#x4E3A;<code>promise</code>&#x4E14;&#x72B6;&#x6001;&#x4E3A;<code>pending</code>&#x65F6;&#xFF0C;&#x987B;&#x4F7F;<code>promise</code>&#x63A5;&#x53D7;<code>value</code>&#x7684;&#x72B6;&#x6001;&#x3002;&#x5728;<code>value</code>&#x72B6;&#x6001;&#x4E3A;<code>pending</code>&#x65F6;&#xFF0C;&#x7B80;&#x5355;&#x5C06;<code>promise</code>&#x7684;<code>deferreds</code>&#x56DE;&#x8C03;&#x5904;&#x7406;&#x6570;&#x7EC4;&#x8D4B;&#x4E88;<code>value.deferreds</code>&#x53D8;&#x91CF;&#x3002;&#x975E;<code>pending</code>&#x72B6;&#x6001;&#xFF0C;&#x4F7F;&#x7528;<code>value</code>&#x5185;&#x90E8;&#x503C;&#x56DE;&#x8C03;<code>promise</code>&#x6CE8;&#x518C;&#x7684;<code>deferreds</code>&#x3002;</p>
+<p>&#x5982;&#x679C;<code>value</code>&#x4E3A;<code>thenable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;<code>value</code>&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x57DF;<code>this</code>&#x8C03;&#x7528;&#x4E4B;&#xFF0C;&#x540C;&#x65F6;&#x56DE;&#x8C03;&#x8C03;&#x7528;&#x5185;&#x90E8;<code>resolve()</code>&#x3001;<code>reject()</code>&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x60C5;&#x5F62;&#x5219;&#x4EE5;<code>value</code>&#x4E3A;&#x53C2;&#x6570;&#x6267;&#x884C;<code>promise</code>&#xFF0C;&#x8C03;&#x7528;<code>onResolved</code>&#x548C;<code>onRejected</code>&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+<h2 id="5reject&#x51FD;&#x6570;">5.reject&#x51FD;&#x6570;</h2>
+<p><code>promise</code>&#x5185;&#x90E8;&#x7684;&#x79C1;&#x6709;&#x65B9;&#x6CD5;<code>reject</code>&#x76F8;&#x8F83;&#x4E8E;<code>resolve</code>&#x903B;&#x8F91;&#x5C31;&#x7B80;&#x5355;&#x591A;&#x4E86;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>function reject(promise, reason) {
+    // &#x975E;pending&#x72B6;&#x6001;&#x4E0D;&#x53EF;&#x6539;&#x53D8;
+    if(promise._state !== 0) return;
+
+    // &#x6539;&#x53D8;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x4E3A;reject
+    promise._state = 2;
+    promise._value = reason;
+
+    // &#x5224;&#x65AD;&#x662F;&#x5426;&#x5B58;&#x5728;then()&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x5904;&#x7406;
+    if(promise._deferreds.length !== 0) {
+        // &#x5F02;&#x6B65;&#x6267;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+        for(var i=0; i&lt;promise._deferreds.length; i++) {
+            handleResolved(promise,promise._deferreds[i]);
+        }
+        promise._deferreds = [];
+    }
+}
+</code></pre><h2 id="6handleresolved&#x51FD;&#x6570;">6.handleResolved&#x51FD;&#x6570;</h2>
+<p>&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x4E86;<code>handleResolved</code>&#x51FD;&#x6570;&#x5374;&#x8FD8;&#x6CA1;&#x5B9E;&#x73B0;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x51FD;&#x6570;&#x5230;&#x5E95;&#x505A;&#x4E86;&#x54EA;&#x4E9B;&#x4E8B;&#x60C5;&#x5462;&#xFF1F;</p>
+<p><code>handleResolved</code>&#x51FD;&#x6570;&#x5177;&#x4F53;&#x4F1A;&#x6839;&#x636E;<code>promise</code>&#x5F53;&#x524D;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x8C03;&#x7528;<code>onResolved</code>&#x3001;<code>onRejected</code>&#xFF0C;&#x5904;&#x7406;<code>then()</code>&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x5F62;&#xFF0C;&#x4EE5;&#x53CA;&#x7EF4;&#x62A4;&#x94FE;&#x5F0F;<code>then()</code>&#x51FD;&#x6570;&#x540E;&#x7EED;&#x8C03;&#x7528;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>function handleResolved(promise, deferred) {
+    // &#x5F02;&#x6B65;&#x6CE8;&#x518C;&#x56DE;&#x8C03;
+    asyncFn(function() {
+        var cb = promise._state === 1? deferred.onResolved: deferred.onRejected;</p>
+<pre><code>    // &#x4F20;&#x9012;&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x51B5;
+    if(cb === null) {
+        if(promise._state === 1) {
+            resolve(deferred.promise, promise._value);
+        } else {
+            reject(deferred.promise, promise._value);
+        }
+        return;
+    }
+
+    // &#x6267;&#x884C;&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;
+    try {
+        var res = cb(promise._value);
+    } catch(err) {
+        reject(deferred.promise, err);
+    }
+
+    // &#x5904;&#x7406;&#x94FE;&#x5F0F;then()&#x6CE8;&#x518C;&#x51FD;&#x6570;&#x8C03;&#x7528;
+    resolve(deferred.promise, res);
+});
+</code></pre><p>}</p>
+<p>&#x5177;&#x4F53;&#x5904;&#x7406;&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;<code>cb</code>&#x4E3A;&#x7A7A;&#x60C5;&#x5F62;&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x5B9E;&#x4F8B;&#x3002;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x56DE;&#x8C03;<code>cb</code>&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;<code>deferred.promise</code>&#x4F5C;&#x4E3A;&#x5F53;&#x524D;<code>promise</code>,&#x7ED3;&#x5408;<code>value</code>&#x8C03;&#x7528;&#x540E;&#x7EED;&#x5904;&#x7406;&#x51FD;&#x6570;&#x7EE7;&#x7EED;&#x5F80;&#x540E;&#x6267;&#x884C;&#xFF0C;&#x5B9E;&#x73B0;&#x503C;&#x7A7F;&#x900F;&#x7A7A;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5F80;&#x540E;&#x4F20;&#x9012;&#x3002;</p>
+<pre><code>Promise.resolve(233)
+.then()
+.then(function(value) {
+    console.log(value);
+})
+</code></pre><p>&#x5B9E;&#x73B0;<code>then</code>&#x51FD;&#x6570;&#x7684;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;<code>Promise.prototype.then()</code>&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x65B0;&#x7684;<code>promise</code>&#x5B9E;&#x4F8B;&#x5373;&#x53EF;&#x3002;&#x4F46;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x4F9D;&#x6B21;&#x8C03;&#x7528;<code>then</code>&#x6CE8;&#x518C;&#x7684;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;&#x5982;<code>handleResolved</code>&#x51FD;&#x6570;&#x6700;&#x540E;&#x4E00;&#x53E5;<code>resolve(deferred.promise,res)</code>&#x6240;&#x793A;&#x3002;</p>
+<h2 id="7&#x57FA;&#x4E8E;promise&#xFF0C;&#x539F;&#x751F;js&#x5B9E;&#x73B0;ajax">7.&#x57FA;&#x4E8E;Promise&#xFF0C;&#x539F;&#x751F;js&#x5B9E;&#x73B0;ajax</h2>
+<p><code>XMLHttpRequest</code>&#x7684;<code>readyState</code>&#x5C5E;&#x6027;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x6240;&#x5904;&#x7684;&#x72B6;&#x6001;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x72B6;&#x6001;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>UNSENT</td>
+<td>open()&#x65B9;&#x6CD5;&#x8FD8;&#x672A;&#x88AB;&#x8C03;&#x7528;</td>
+</tr>
+<tr>
+<td>1</td>
+<td>OPENED</td>
+<td>open()&#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x88AB;&#x8C03;&#x7528;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>HEADERS_RECEIVED</td>
+<td>send()&#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x88AB;&#x8C03;&#x7528;,&#x54CD;&#x5E94;&#x5934;&#x548C;&#x54CD;&#x5E94;&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LOADING</td>
+<td>&#x6B63;&#x5728;&#x4E0B;&#x8F7D;&#x54CD;&#x5E94;&#x4F53;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DONE</td>
+<td>&#x8BF7;&#x6C42;&#x8FC7;&#x7A0B;&#x5DF2;&#x7ECF;&#x5B8C;&#x6BD5;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1&#x5B9E;&#x73B0;get&#x65B9;&#x6CD5;">1.&#x5B9E;&#x73B0;get&#x65B9;&#x6CD5;</h4>
+<pre><code>function get(url) {
+    return new Promise((resolve, rejetct) =&gt; {
+        let xhr = new XMLHttpRequest();
+        xhr.open(&apos;GET&apos;,url,true);
+
+        xhr.onreadystatechange = function() {
+            if(this.readyState === 4) {
+                if(this.status === 200) {
+                    resolve(this.responseText, this);
+                } else {
+                    let reason = {
+                        code: this.status,
+                        response: this.response
+                    };
+                    reject(reason, this);
+                }
+            }
+        };
+
+        xhr.send();
+    });
+}
+</code></pre><h4 id="2&#x5B9E;&#x73B0;post&#x65B9;&#x6CD5;">2.&#x5B9E;&#x73B0;post&#x65B9;&#x6CD5;</h4>
+<pre><code>function post(url, data) {
+    return new Promise((resolve, reject) =&gt; {
+        let xhr = new XMLHttpRequest();
+        xhr.open(&apos;post&apos;,url, true);
+        xhr.setRequestHeader(&apos;Content-type&apos;, &apos;application/x-www-form-urlencoded&apos;);
+
+        xhr.onreadystatechange = function() {
+            if(this.readyState === 4) {
+                if(this.status === 200) {
+                    resolve(JSON.parse(this.responseText), this);
+                } else {
+                    var reason = {
+                        code: this.status,
+                        response: this.response
+                    }
+                    reject(reason, this);
+                }
+            }
+        };
+
+        xhr.send(JSON.stringify(data));
+    });
+}
+</code></pre><h2 id="8&#x53C2;&#x8003;&#x6587;&#x732E;">8.&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<p><a href="https://juejin.im/post/5a30193051882503dc53af3c#heading-11" target="_blank">&#x89E3;&#x8BFB;Promise&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x539F;&#x7406;</a></p>
+<p><a href="https://promisesaplus.com/" target="_blank">Promises/A+</a></p>
+<p><a href="https://github.com/xieranmaya/blog/issues/3" target="_blank">&#x5256;&#x6790;Promise&#x5185;&#x90E8;&#x7ED3;&#x6784;&#xFF0C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x3001;&#x80FD;&#x901A;&#x8FC7;&#x6240;&#x6709;Test case&#x7684;Promise&#x7C7B;</a></p>
+<p><a href="https://blog.csdn.net/qq_35844177/article/details/75217681" target="_blank">&#x4F7F;&#x7528;Promise&#x5C01;&#x88C5;&#x7B80;&#x5355;Ajax&#x65B9;&#x6CD5;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ajax.html" class="navigation navigation-prev " aria-label="Previous page: Ajax">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="closure.html" class="navigation navigation-next " aria-label="Next page: 闭包">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Promise原理及实现","level":"1.5.8","depth":2,"next":{"title":"闭包","level":"1.5.9","depth":2,"path":"js/closure.md","ref":"js/closure.md","articles":[]},"previous":{"title":"Ajax","level":"1.5.7","depth":2,"path":"js/ajax.md","ref":"js/ajax.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/promise.md","mtime":"2018-08-16T07:56:25.945Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-24T09:39:39.395Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
