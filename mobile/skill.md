@@ -9,7 +9,7 @@
 如下设置便可以消除延迟：
 
 ```
-<meta name="viewport" content="width=device-width;initial-scale=1.0">
+<meta name="viewport" content="width=device-width;initial-scale=1.0;user-scalable=no">
 ```
 
 > 解决方案二：使用fastclick
@@ -32,15 +32,11 @@ html {
 
 最简单、完美的解决方案。
 
-把索面所有的click全部换成touch事件，需要特别注意a标签，它的href也是click，需要去掉换成js控制跳转。
+把页面所有的click全部换成touch事件，需要特别注意a标签，它的href也是click，需要去掉换成js控制跳转。
 
-> 解决方案二： 设置user-scalable=no
+> 解决方案二： 使用fastclick
 
-直接禁止用户缩放屏幕，也就不会有延迟存在了。
-
-> 解决方案三： 使用fastclick
-
-引入fastClick.js之后需要在body上实例化FastClick,并全部监听click事件。
+引入`fastClick.js`之后需要在`body`上实例化`FastClick`,并全部监听`clic`k事件。
 
 ```
 /* 在document.body实例化FastClick */
@@ -53,7 +49,7 @@ if(document.addEvenetListener) {
 
 ## 3.移动端滚动穿透问题
 
-移动端当有fixed蒙层遮罩时，在屏幕上滑动能够滑动背景下的内容，这就是滚动穿透问题。
+移动端当有`fixed`蒙层遮罩时，在屏幕上滑动能够滑动背景下的内容，这就是滚动穿透问题。
 
 解决方案原理：禁用body的滚动条，由于滚动条的位置会丢失，所以需要在展示弹窗之前保存滚动条的位置，隐藏弹窗时恢复滚动条的位置。
 
