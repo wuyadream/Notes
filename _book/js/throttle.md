@@ -42,7 +42,7 @@ setTinterval(throttle(fn,1000),10) // 每1秒打印一个boom
 
 ```
 function debounce(fn, wait) {
-    vr timer = null;
+    var timer = null;
     return function() {
         var context = this;
         var args = arguments;
