@@ -25,9 +25,9 @@
 
 ```
 1.float 除了none以外的值
-2.overflow 除了visible 以外的值（hidden，auto，scroll）
-3.display (table-cell，table-caption，inline-block, flex, inline-flex)
-4.position值为（absolute，fixed）
+2.overflow 除了visible 以外的值(hidden,auto,scroll)
+3.display (table-cell, table-caption, inline-block, flex, inline-flex)
+4.position值为(absolute, fixed)
 5.fieldset元素
 ```
 

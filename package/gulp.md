@@ -58,7 +58,7 @@ gulp.src('client/templates/*.jade')
 
 类型：`Object`
 
-通过 glob-stream 所传递给 node-glob 的参数。除了 node-glob 和 glob-stream 所支持的参数外，gulp 增加了一些额外的选项参数：
+通过`glob-stream`所传递给`node-glob`的参数。除了`node-glob`和`glob-stream`所支持的参数外，`gulp`增加了一些额外的选项参数：
 
 3.options.buffer
 
@@ -74,7 +74,7 @@ gulp.src('client/templates/*.jade')
 
 5.options.base
 
-类型：`String` 默认值：将会加在glob之前
+类型：`String` 默认值：将会加在`glob`之前
 
 如, 请想像一下在一个路径为 `client/js/somedir` 的目录中，有一个文件叫 `somefile.js` ：
 
