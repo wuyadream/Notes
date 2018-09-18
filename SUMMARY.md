@@ -51,4 +51,7 @@
     * [移动端开发技巧](mobile/skill.md)
 * [nodejs](nodejs/README.md)
     * [express](nodejs/express.md)
+* [Git](git/readme.md)
+    * [Git简介](git/intr.md)
+    * [Git命令手册](git/cmd.md)
 
