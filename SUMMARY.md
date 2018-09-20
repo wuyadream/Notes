@@ -41,6 +41,7 @@
     * [React](frame/react.md)
 * [视频](video/README.md)
     * [flv](video/flv.md)
+    * [mp4](video/mp4.md)
 * [打包工具](package/README.md)
     * [gulp](package/gulp.md)
     * [webpack](package/webpack.md)
